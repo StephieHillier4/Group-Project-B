@@ -51,49 +51,18 @@ button:hover {
     margin: 0;
   }
 }
-.site-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 15px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  transition: left 5s ease;
-}
-.site-footer li {
-  list-style: none;
-}
-.site-footer img {
-  width: 1.5rem;
-  filter: brightness(0) invert(1);
-}
-.site-footer ul.social-media {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-.site-footer .footer-desktop {
-  display: none;
+.section .text-content {
+  position: relative;
+  z-index: 2;
+  margin: 9rem 5rem 8rem 2rem;
 }
 
-@media (min-width: 72em) {
-  .site-footer {
-    justify-content: space-around;
-  }
-  .footer-desktop ul {
-    display: flex;
-    align-items: center;
-    gap: 1.8rem;
-  }
-  .footer-desktop a,
-  .footer-desktop p {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto Mono", monospace;
-    font-size: 18px;
-  }
-}
-.site-footer.pushed {
-  left: 28rem;
+.section img {
+  position: absolute;
+  width: 80%;
+  z-index: 1;
+  right: -17rem;
+  top: -5rem;
 }
 
 .site-nav {
@@ -238,6 +207,79 @@ button:hover {
   .side-nav span {
     display: none;
   }
+}
+
+.site-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 15px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  transition: left 5s ease;
+}
+.site-footer li {
+  list-style: none;
+}
+.site-footer img {
+  width: 1.5rem;
+  filter: brightness(0) invert(1);
+}
+.site-footer ul.social-media {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.site-footer .footer-desktop {
+  display: none;
+}
+
+@media (min-width: 72em) {
+  .site-footer {
+    justify-content: space-around;
+  }
+  .footer-desktop ul {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  .footer-desktop a,
+  .footer-desktop p {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Mono", monospace;
+    font-size: 18px;
+  }
+}
+.site-footer.pushed {
+  left: 28rem;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3rem;
+  height: 95vh;
+  margin: 1rem;
+}
+@media (min-width: 72em) {
+  .section .text-content {
+    margin: 7.5rem 7rem 8rem 5rem;
+  }
+  .section img {
+    width: 50%;
+  }
+}
+
+.section.pushed {
+  left: 28rem;
+}
+
+.why {
+  background-color: rgb(21, 25, 43);
+  color: rgb(255, 255, 255);
+}
+.why p {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=styles.css.map */
