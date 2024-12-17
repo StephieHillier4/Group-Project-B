@@ -1,0 +1,54 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 15px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: left 5s ease;
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        width: 1.5rem;
+        filter: brightness(0) invert(1);
+    }
+
+    ul.social-media {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 72em) {
+    .site-footer {
+        justify-content: space-around;
+    }
+
+    .footer-desktop ul {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+    }
+
+    .footer-desktop a,
+    .footer-desktop p {
+        color: $white-font-color;
+        font-family: $link-font;
+        font-size: 18px;
+    }
+}
+
+.site-footer.pushed {
+    left: 28rem;
+}

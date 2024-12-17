@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+// Mixin for toggle menu
+@mixin toggle-transition {
+    transition: left 5s ease;
+}
+
+@mixin pushed-right {
+    left: 28rem;
+}

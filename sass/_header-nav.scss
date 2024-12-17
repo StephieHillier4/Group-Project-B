@@ -1,0 +1,174 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-nav {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 1.2rem;
+    top: 1rem;
+    transition: left 0.5s ease;
+}
+
+.site-nav img {
+    height: 4rem;
+    filter: brightness(0) invert(1);
+    margin: 1rem 0 0 0.5rem;
+    padding: 1rem;
+    vertical-align: bottom;
+}
+
+.site-nav a img {
+    padding-left: 0;
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-btn img:hover {
+    background-color: $hamburger-hover-color;
+    border-radius: 50%;
+}
+
+// Toggle menu
+.site-nav-list {
+    background-color: $why-bg-color;
+    left: -100%;
+    width: 27rem;
+    height: 95vh;
+    position: fixed;
+    z-index: 50;
+    border-radius: 3rem;
+    margin: 1rem 1rem 2rem;
+    transition: left 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+        width: 1.8rem;
+        // https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-styles-with-css
+        filter: brightness(0) invert(1);
+        vertical-align: top;
+        margin-right: 0.5rem;
+    }
+
+    a {
+        color: $white-font-color;
+        font-size: 1.4rem;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 1.7rem;
+    }
+
+    li:last-of-type {
+        border-bottom: none;
+    }
+
+    // @include mq($desktop) {
+    //     ul {
+    //         display: flex;
+    //     }
+    // }
+}
+
+.site-nav.toggled {
+    left: 29rem;
+}
+
+.site-nav-list.toggled {
+    left: 0;
+}
+
+.site-nav-top {
+    li {
+        border-bottom: $border-bottom-color solid 1px;
+        padding-left: 0;
+    }
+}
+
+.site-nav-bottom {
+    a,
+    p {
+        color: $grey-font-color;
+        font-family: $link-font;
+        font-size: 18px;
+    }
+
+    li {
+        padding: 7px;
+    }
+}
+
+// Header in desktop view
+@media (min-width: 72em) {
+    .nav-btn {
+        display: none;
+    }
+
+    .site-nav-list {
+        display: flex;
+        background-color: transparent;
+        transition: none;
+        left: 11rem;
+    }
+
+    .site-nav-list img,
+    .site-nav-bottom {
+        display: none;
+    }
+
+    .site-nav-top li {
+        border: none;
+    }
+
+    .site-nav-top {
+        display: flex;
+    }
+}
+
+// Side Navigation
+.side-nav {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    text-align: end;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    li {
+        list-style: none;
+        padding: 8px;
+    }
+
+    li a {
+        color: $white-font-color;
+        padding: 3px 10px;
+        font-size: 1.2rem;
+        font-weight: 200;
+        cursor: default;
+    }
+
+    li a::after {
+        content: "";
+        height: 2rem;
+        background-color: white;
+        position: relative;
+        padding: 2px;
+        left: 10px;
+        border-radius: 2rem;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1151px) {
+        span {
+            display: none;
+        }
+    }
+}
