@@ -8,3 +8,26 @@
 @mixin pushed-right {
     left: 28rem;
 }
+
+// Mixin for main sections
+@mixin section-layout {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3rem;
+    height: 95vh;
+    margin: 1rem;
+}
+
+%article-layout {
+    position: relative;
+    z-index: 2;
+    margin: $article-mobile;
+}
+
+%bg-symbol-mobile {
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+    right: -17rem;
+    top: -5rem;
+}

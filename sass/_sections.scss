@@ -1,0 +1,48 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.section {
+    @include section-layout;
+
+    img {
+        @extend %bg-symbol-mobile;
+    }
+
+    .text-content {
+        @extend %article-layout;
+    }
+
+    @media (min-width: 72em) {
+        .text-content {
+            margin: $article-desktop;
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+.section.pushed {
+    left: 28rem;
+}
+
+// ----------- Please add your sections below
+
+// Home
+
+// About
+
+// Why - Dayna
+.why {
+    background-color: $why-bg-color;
+    color: $white-font-color;
+
+    p {
+        opacity: 0.8;
+    }
+}
+
+// Design
+
+// Stay Updated
