@@ -1,0 +1,29 @@
+// Colors
+$html-bg-color: rgb(255, 255, 255);
+$why-bg-color: rgb(21, 25, 43);
+$why-logo-color: rgb(40, 48, 78);
+$border-bottom-color: rgb(68, 71, 85);
+$hamburger-hover-color: rgb(208, 218, 242);
+
+// Text Colors
+$home-font-color: rgb(26, 73, 181);
+$design-font-color: rgb(20, 24, 39);
+$white-font-color: rgb(255, 255, 255);
+$grey-font-color: rgb(138, 140, 149);
+
+// Fonts
+$main-font: "Roboto", sans-serif;
+$link-font: "Roboto Mono", monospace;
+
+// Typography
+$line-height: 1.5;
+
+// Media Query Breakpoints
+$desktop: em(1151);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+
+// Utility variables
+$link-hover-selector: "&:hover, &:focus, &:active";
