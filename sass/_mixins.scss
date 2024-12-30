@@ -11,23 +11,28 @@
 
 // Mixin for main sections
 @mixin section-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    border-radius: 3rem;
-    height: 95vh;
     margin: 1rem;
+    padding: 5rem 0;
+    scroll-snap-align: start;
+    border-radius: 3rem;
 }
 
 %article-layout {
     position: relative;
     z-index: 2;
-    margin: $article-mobile;
+    width: $article-width-mobile;
 }
 
 %bg-symbol-mobile {
     position: absolute;
-    width: 80%;
+    width: 90%;
     z-index: 1;
-    right: -17rem;
-    top: -5rem;
+    right: -10rem;
+    top: -4rem;
+    transform: rotate(-10deg);
 }
