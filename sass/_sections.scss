@@ -12,9 +12,28 @@
         @extend %article-layout;
     }
 
+    @media (min-width: 30em) {
+        height: 97vh;
+        padding: 0;
+
+        img {
+            width: 80%;
+            z-index: 1;
+            right: -17rem;
+            top: -5rem;
+            transform: rotate(-5deg);
+        }
+    }
+
     @media (min-width: 72em) {
+        height: 95vh;
+
         .text-content {
-            margin: $article-desktop;
+            width: $article-width-desktop;
+        }
+
+        p {
+            margin-right: $text-margin;
         }
 
         img {
