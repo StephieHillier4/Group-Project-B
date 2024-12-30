@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row-reverse;
     left: 1.2rem;
-    top: 1rem;
+    top: 1.3rem;
     transition: left 0.5s ease;
 }
 
@@ -35,22 +35,21 @@
 
 // Toggle menu
 .site-nav-list {
-    background-color: $why-bg-color;
-    left: -100%;
-    width: 27rem;
-    height: 95vh;
     position: fixed;
-    z-index: 50;
-    border-radius: 3rem;
-    margin: 1rem 1rem 2rem;
-    transition: left 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 27rem;
+    height: 97vh;
+    margin: 0 1rem 2rem;
+    left: -100%;
+    background-color: $why-bg-color;
+    z-index: 50;
+    border-radius: 3rem;
+    transition: left 0.5s ease;
 
     img {
         width: 1.8rem;
-        // https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-styles-with-css
         filter: brightness(0) invert(1);
         vertical-align: top;
         margin-right: 0.5rem;
@@ -111,11 +110,20 @@
         display: none;
     }
 
+    .site-nav {
+        left: 3rem;
+        top: 1.3rem;
+    }
+
     .site-nav-list {
-        display: flex;
         background-color: transparent;
         transition: none;
-        left: 11rem;
+        left: 13rem;
+        top: 0.5rem;
+    }
+
+    .site-nav-top {
+        display: flex;
     }
 
     .site-nav-list img,
@@ -127,8 +135,8 @@
         border: none;
     }
 
-    .site-nav-top {
-        display: flex;
+    .menu-jobs {
+        display: none;
     }
 }
 
@@ -136,7 +144,7 @@
 .side-nav {
     position: fixed;
     z-index: 10;
-    right: 20px;
+    right: 1.5rem;
     text-align: end;
     display: flex;
     height: 100%;

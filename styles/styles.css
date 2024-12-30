@@ -81,7 +81,7 @@ button:hover {
   display: flex;
   flex-direction: row-reverse;
   left: 1.2rem;
-  top: 1rem;
+  top: 1.3rem;
   transition: left 0.5s ease;
 }
 
@@ -108,18 +108,18 @@ button:hover {
 }
 
 .site-nav-list {
-  background-color: rgb(21, 25, 43);
-  left: -100%;
-  width: 27rem;
-  height: 95vh;
   position: fixed;
-  z-index: 50;
-  border-radius: 3rem;
-  margin: 1rem 1rem 2rem;
-  transition: left 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 27rem;
+  height: 97vh;
+  margin: 0 1rem 2rem;
+  left: -100%;
+  background-color: rgb(21, 25, 43);
+  z-index: 50;
+  border-radius: 3rem;
+  transition: left 0.5s ease;
 }
 .site-nav-list img {
   width: 1.8rem;
@@ -166,11 +166,18 @@ button:hover {
   .nav-btn {
     display: none;
   }
+  .site-nav {
+    left: 3rem;
+    top: 1.3rem;
+  }
   .site-nav-list {
-    display: flex;
     background-color: transparent;
     transition: none;
-    left: 11rem;
+    left: 13rem;
+    top: 0.5rem;
+  }
+  .site-nav-top {
+    display: flex;
   }
   .site-nav-list img,
   .site-nav-bottom {
@@ -179,14 +186,14 @@ button:hover {
   .site-nav-top li {
     border: none;
   }
-  .site-nav-top {
-    display: flex;
+  .menu-jobs {
+    display: none;
   }
 }
 .side-nav {
   position: fixed;
   z-index: 10;
-  right: 20px;
+  right: 1.5rem;
   text-align: end;
   display: flex;
   height: 100%;
@@ -222,7 +229,7 @@ button:hover {
 .site-footer {
   position: fixed;
   width: 100%;
-  bottom: 15px;
+  bottom: 2rem;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -245,6 +252,9 @@ button:hover {
 }
 
 @media (min-width: 72em) {
+  .site-footer .footer-desktop {
+    display: block;
+  }
   .site-footer {
     justify-content: space-around;
   }
