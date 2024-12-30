@@ -4,7 +4,7 @@
 .site-footer {
     position: fixed;
     width: 100%;
-    bottom: 15px;
+    bottom: 2rem;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -31,6 +31,10 @@
 }
 
 @media (min-width: 72em) {
+    .site-footer .footer-desktop {
+        display: block;
+    }
+
     .site-footer {
         justify-content: space-around;
     }
