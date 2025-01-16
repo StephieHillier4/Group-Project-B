@@ -34,12 +34,11 @@ h2 {
 }
 
 h2 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.3rem;
+  font-weight: 400;
 }
 
 p {
-  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -54,10 +53,19 @@ button:hover {
   cursor: pointer;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 48em) {
   h2 {
-    font-size: 4.7rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 3.8rem;
     margin: 0;
+  }
+  p {
+    font-size: 1.2rem;
   }
 }
 .section .text-content {
@@ -301,18 +309,20 @@ button:hover {
     transform: rotate(-5deg);
   }
 }
-@media (min-width: 72em) {
+@media (min-width: 48em) {
   .section {
     height: 95vh;
   }
   .section .text-content {
-    width: 80%;
-  }
-  .section p {
-    margin-right: 4rem;
+    width: 38rem;
   }
   .section img {
     width: 50%;
+  }
+}
+@media (min-width: 64rem) {
+  .section p {
+    margin-right: 4rem;
   }
 }
 
