@@ -6,7 +6,8 @@
 }
 
 @mixin pushed-right {
-    left: 28rem;
+    // left: 28rem;
+    left: 20rem;
 }
 
 // Mixin for main sections
@@ -19,7 +20,8 @@
     margin: 1rem;
     padding: 5rem 0;
     scroll-snap-align: start;
-    border-radius: 3rem;
+    // border-radius: 3rem;
+    border-radius: 1.5rem;
 }
 
 %article-layout {

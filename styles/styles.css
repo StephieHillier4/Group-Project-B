@@ -86,9 +86,9 @@ button:hover {
 }
 
 .site-nav img {
-  height: 4rem;
+  height: 3.2rem;
   filter: brightness(0) invert(1);
-  margin: 1rem 0 0 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
   padding: 1rem;
   vertical-align: bottom;
 }
@@ -112,28 +112,28 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 27rem;
+  width: 19rem;
   height: 97vh;
   margin: 0 1rem 2rem;
   left: -100%;
   background-color: rgb(21, 25, 43);
   z-index: 50;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   transition: left 0.5s ease;
 }
 .site-nav-list img {
-  width: 1.8rem;
+  width: 1.1rem;
   filter: brightness(0) invert(1);
   vertical-align: top;
   margin-right: 0.5rem;
 }
 .site-nav-list a {
   color: rgb(255, 255, 255);
-  font-size: 1.4rem;
+  font-size: 0.9rem;
 }
 .site-nav-list li {
   list-style-type: none;
-  padding: 1.7rem;
+  padding: 1.1rem;
 }
 .site-nav-list li:last-of-type {
   border-bottom: none;
@@ -156,13 +156,13 @@ button:hover {
 .site-nav-bottom p {
   color: rgb(138, 140, 149);
   font-family: "Roboto Mono", monospace;
-  font-size: 18px;
+  font-size: 0.8rem;
 }
 .site-nav-bottom li {
-  padding: 7px;
+  padding: 5px;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 48em) {
   .nav-btn {
     display: none;
   }
@@ -173,11 +173,12 @@ button:hover {
   .site-nav-list {
     background-color: transparent;
     transition: none;
-    left: 13rem;
+    left: 10rem;
     top: 0.5rem;
   }
   .site-nav-top {
     display: flex;
+    gap: 1rem;
   }
   .site-nav-list img,
   .site-nav-bottom {
@@ -206,7 +207,7 @@ button:hover {
 .side-nav li a {
   color: rgb(255, 255, 255);
   padding: 3px 10px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 200;
   cursor: default;
 }
@@ -220,7 +221,7 @@ button:hover {
   border-radius: 2rem;
   cursor: pointer;
 }
-@media (max-width: 1151px) {
+@media (max-width: 48rem) {
   .side-nav span {
     display: none;
   }
@@ -229,7 +230,7 @@ button:hover {
 .site-footer {
   position: fixed;
   width: 100%;
-  bottom: 2rem;
+  bottom: 1rem;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -239,19 +240,20 @@ button:hover {
   list-style: none;
 }
 .site-footer img {
-  width: 1.5rem;
+  width: 1.1rem;
   filter: brightness(0) invert(1);
 }
 .site-footer ul.social-media {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin: 0;
 }
 .site-footer .footer-desktop {
   display: none;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 48em) {
   .site-footer .footer-desktop {
     display: block;
   }
@@ -262,16 +264,17 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 1.8rem;
+    margin: 0;
   }
   .footer-desktop a,
   .footer-desktop p {
     color: rgb(255, 255, 255);
     font-family: "Roboto Mono", monospace;
-    font-size: 18px;
+    font-size: 0.8rem;
   }
 }
 .site-footer.pushed {
-  left: 28rem;
+  left: 19.5rem;
 }
 
 .section {
@@ -283,7 +286,7 @@ button:hover {
   margin: 1rem;
   padding: 5rem 0;
   scroll-snap-align: start;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
 }
 @media (min-width: 30em) {
   .section {
@@ -314,7 +317,7 @@ button:hover {
 }
 
 .section.pushed {
-  left: 28rem;
+  left: 19.5rem;
 }
 
 .why {
