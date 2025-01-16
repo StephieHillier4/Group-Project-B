@@ -19,9 +19,9 @@ body {
 main {
     max-height: 98vh;
     margin-top: 1rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
 
     @media (min-width: 72em) {
         max-height: 95vh;
