@@ -34,7 +34,7 @@ h2 {
 }
 
 h2 {
-  font-size: 3.3rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -206,18 +206,18 @@ button:hover {
 }
 .side-nav li a {
   color: rgb(255, 255, 255);
-  padding: 3px 10px;
+  padding: 10px;
   font-size: 0.8rem;
   font-weight: 200;
   cursor: default;
 }
 .side-nav li a::after {
   content: "";
-  height: 2rem;
+  height: 3rem;
   background-color: white;
   position: relative;
   padding: 2px;
-  left: 10px;
+  margin-left: 0.5rem;
   border-radius: 2rem;
   cursor: pointer;
 }
