@@ -25,19 +25,22 @@
         }
     }
 
-    @media (min-width: 72em) {
+    // @media (min-width: 72em) {
+    @media (min-width: 48em) {
         height: 95vh;
 
         .text-content {
             width: $article-width-desktop;
         }
 
-        p {
-            margin-right: $text-margin;
-        }
-
         img {
             width: 50%;
+        }
+    }
+
+    @media (min-width: 64rem) {
+        p {
+            margin-right: $text-margin;
         }
     }
 }
