@@ -121,4 +121,37 @@
 
 // Design
 
+.design {
+    display: flex;
+    flex-direction: column;
+    background-color: $design-bg-color;
+    color: $white-font-color;
+}
+
+.more-details {
+    margin-right: 15em;
+    margin-top: 1em;
+    border: none;
+}
+
+.more-details button{
+    justify-content: center;   
+    align-items: center;  
+    border-radius: 2rem;
+    z-index: 99;
+    width: 14em;
+    height: 3.8em;
+    background-color: $design-font-color;
+
+
+}
+
+.more-details a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $white-font-color;
+ }
+
+
+
 // Stay Updated

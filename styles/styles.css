@@ -342,7 +342,7 @@ button:hover {
 .about {
   display: flex;
   flex-direction: column;
-  background-color: rgb(26, 73, 181);
+  background-color: rgb(33, 80, 190);
   color: rgb(255, 255, 255);
 }
 
@@ -368,7 +368,7 @@ button:hover {
 }
 
 .learn-more a {
-  color: rgb(26, 73, 181);
+  color: rgb(33, 80, 190);
   font-weight: bold;
 }
 
@@ -377,7 +377,7 @@ button:hover {
 }
 
 .read-docs {
-  background-color: rgb(26, 73, 181);
+  background-color: rgb(33, 80, 190);
   border: 1px solid rgb(255, 255, 255);
 }
 
@@ -391,6 +391,35 @@ button:hover {
 }
 .why p {
   opacity: 0.8;
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(20, 138, 145);
+  color: rgb(255, 255, 255);
+}
+
+.more-details {
+  margin-right: 15em;
+  margin-top: 1em;
+  border: none;
+}
+
+.more-details button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 99;
+  width: 14em;
+  height: 3.8em;
+  background-color: rgb(19, 25, 44);
+}
+
+.more-details a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=styles.css.map */
