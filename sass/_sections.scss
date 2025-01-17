@@ -52,6 +52,14 @@
 // ----------- Please add your sections below
 
 // Home
+.home {
+    background-color: $home-bg-color;
+    color: $home-font-color;
+
+    h2 {
+        font-size: 96px;
+    }
+}
 
 // About
 .about {

@@ -331,6 +331,14 @@ button:hover {
   left: 19.5rem;
 }
 
+.home {
+  background-color: rgb(225, 234, 249);
+  color: rgb(28, 83, 189);
+}
+.home h2 {
+  font-size: 96px;
+}
+
 .about {
   display: flex;
   flex-direction: column;
