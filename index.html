@@ -17,12 +17,18 @@
     <body>
         <header class="site-header">
             <div class="site-nav">
-                <a href=""><img src="images/eco-logo.svg" alt="eco logo" /></a>
+                <a href=""
+                    ><img
+                        src="images/eco-logo.svg"
+                        alt="eco logo"
+                        class="colorChange"
+                /></a>
                 <button class="nav-btn" id="nav-btn">
                     <img
                         src="images/hamburger-icon.svg"
                         alt="Navigation menu icon"
                         id="navicon"
+                        class="colorChange"
                     />
                 </button>
             </div>
@@ -37,10 +43,8 @@
                         <a href="">Docs</a>
                     </li>
                     <li class="menu-forum">
-                        <img src="images/forum-icon.svg" alt="Forum icon" /><a
-                            href=""
-                            >Forum</a
-                        >
+                        <img src="images/forum-icon.svg" alt="Forum icon" />
+                        <a href="">Forum</a>
                     </li>
                     <li class="menu-support">
                         <img
@@ -60,36 +64,38 @@
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms of Service</a></li>
                     <li>
-                        <p>&copy; 2024 Eco</p>
+                        <p>&copy; 2025 Eco</p>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <main>
+        <main id="site-wrapper">
             <!-- Side Navigation -->
             <nav class="side-nav" id="side-nav">
                 <ul>
                     <li>
-                        <a href=""><span>Home</span></a>
+                        <a href="" class="colorChange"><span>Home</span></a>
                     </li>
                     <li>
-                        <a href=""><span>About</span></a>
+                        <a href="" class="colorChange"><span>About</span></a>
                     </li>
                     <li>
-                        <a href=""><span>Why</span></a>
+                        <a href="" class="colorChange"><span>Why</span></a>
                     </li>
                     <li>
-                        <a href=""><span>Design</span></a>
+                        <a href="" class="colorChange"><span>Design</span></a>
                     </li>
                     <li>
-                        <a href=""><span>Stay Updated</span></a>
+                        <a href="" class="colorChange"
+                            ><span>Stay Updated</span></a
+                        >
                     </li>
                 </ul>
             </nav>
 
             <!-- Home - Ricky -->
-            <section class="home section" id="section">
+            <section class="home section">
                 <img
                     src="images/logo-home.svg"
                     alt="eco symbol in the background"
@@ -114,42 +120,37 @@
             </section>
 
             <!--About - Steph  -->
-        <section class="about section" >
-            
-            <img
-            src="images/logo-about.svg"
-            alt="eco symbol in the background"
-            class="e-bg-symbol"
-            />   
-            
-            
-            <div class="text-content">   
-                <h2>A protocol for stablecoins</h2>
-   
-                <p>And for the apps that use them</p>
-               
-                <p>
-                  Eco is designed to be the default protocol for apps that use stablecoins
-                  or need stablecoin liquidity. Eco provides a frictionless stablecoin
-                  experience that accelerates user onboarding and streamlines money
-                  movement onchain.
-                </p>
-            </div>
+            <section class="about section">
+                <img
+                    src="images/logo-about.svg"
+                    alt="eco symbol in the background"
+                    class="e-bg-symbol"
+                />
 
-            <div class="more-docs"> 
-                <button class="learn-more"><a href="https://eco.com/blog/">Learn More</a></button>
-                <button class="read-docs"><a href="https://eco.com/docs/home">Read Docs</a></button>
-             </div> 
-        </section>
-        
-        
-        
+                <div class="text-content">
+                    <h2>A protocol for stablecoins</h2>
+                    <p>And for the apps that use them</p>
+                    <p>
+                        Eco is designed to be the default protocol for apps that
+                        use stablecoins or need stablecoin liquidity. Eco
+                        provides a frictionless stablecoin experience that
+                        accelerates user onboarding and streamlines money
+                        movement onchain.
+                    </p>
+                </div>
 
+                <div class="more-docs">
+                    <button class="learn-more">
+                        <a href="https://eco.com/blog/">Learn More</a>
+                    </button>
+                    <button class="read-docs">
+                        <a href="https://eco.com/docs/home">Read Docs</a>
+                    </button>
+                </div>
+            </section>
 
-
-           
             <!-- Why - Dayna -->
-            <section class="why section" id="section">
+            <section class="why section">
                 <img
                     src="images/logo-why.svg"
                     alt="eco symbol in the background"
@@ -172,55 +173,64 @@
             </section>
 
             <!-- Design - Steph -->
-             
-                <section class="design section" >
-            
-                    <img
+
+            <section class="design section">
+                <img
                     src="images/logo-design.svg"
                     alt="eco symbol in the background"
                     class="e-bg-symbol"
-                    />   
-                    
-                    
-                    <div class="text-content">   
-                        <h2 style="color: rgb(19, 25, 44)">A full stack upgrade for transacting onchain</h2>
-                       
-                        <p style="color: rgb(35, 44, 71)">
-                          The Eco Protocol is an Ethereum-based rollup and permissonless liquidity network designed from the ground up for the most capital efficient stablecoin transaction execution with the simplest possible user experience.
-                        </p>
-                    </div>
-        
-                    <div class="more-details"> 
-                        <button class="more-details"><a href="https://eco.com/docs/home">More Details</a></button>
-                        
-                </section>
-                
-            
-            <!-- stay-updated-section -->
-            <section>
+                />
 
+                <div class="text-content">
+                    <h2 style="color: rgb(19, 25, 44)">
+                        A full stack upgrade for transacting onchain
+                    </h2>
+                    <p style="color: rgb(35, 44, 71)">
+                        The Eco Protocol is an Ethereum-based rollup and
+                        permissonless liquidity network designed from the ground
+                        up for the most capital efficient stablecoin transaction
+                        execution with the simplest possible user experience.
+                    </p>
+                </div>
+
+                <div class="more-details">
+                    <button class="more-details">
+                        <a href="https://eco.com/docs/home">More Details</a>
+                    </button>
+                </div>
             </section>
+
+            <!-- stay-updated-section -->
+            <section></section>
         </main>
 
         <footer class="site-footer" id="site-footer">
             <nav class="footer-desktop">
                 <ul>
                     <li>
-                        <p>&copy; 2025 Eco</p>
+                        <p class="colorChange">&copy; 2025 Eco</p>
                     </li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Jobs</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="" class="colorChange">Contact</a></li>
+                    <li><a href="" class="colorChange">Jobs</a></li>
+                    <li><a href="" class="colorChange">Privacy Policy</a></li>
+                    <li><a href="" class="colorChange">Terms of Service</a></li>
                 </ul>
             </nav>
             <ul class="social-media">
                 <li>
-                    <a href=""><img src="images/x-logo.svg" alt="X logo" /></a>
+                    <a href=""
+                        ><img
+                            src="images/x-logo.svg"
+                            alt="X logo"
+                            class="colorChange"
+                    /></a>
                 </li>
                 <li>
                     <a href=""
-                        ><img src="images/discord-logo.svg" alt="Discord logo"
+                        ><img
+                            src="images/discord-logo.svg"
+                            alt="Discord logo"
+                            class="colorChange"
                     /></a>
                 </li>
                 <li>
@@ -228,6 +238,7 @@
                         ><img
                             src="images/linkedin-logo.svg"
                             alt="Linkedin logo"
+                            class="colorChange"
                     /></a>
                 </li>
                 <li>
@@ -235,6 +246,7 @@
                         ><img
                             src="images/facebook.logo.svg"
                             alt="Facebook logo"
+                            class="colorChange"
                     /></a>
                 </li>
             </ul>
