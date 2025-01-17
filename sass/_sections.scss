@@ -25,7 +25,6 @@
         }
     }
 
-    // @media (min-width: 72em) {
     @media (min-width: 48em) {
         height: 95vh;
 
@@ -46,7 +45,7 @@
 }
 
 .section.pushed {
-    left: 19.5rem;
+    left: 19rem;
 }
 
 // ----------- Please add your sections below
@@ -76,19 +75,18 @@
     gap: 1em;
 }
 
-.more-docs button{
+.more-docs button {
     display: flex;
-    justify-content: center;   
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
     height: 3.8em;
-
 }
 
 .more-docs a {
-   font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .learn-more a {
@@ -100,16 +98,16 @@
     border: none;
 }
 
-.read-docs{
+.read-docs {
     background-color: $about-bg-color;
     border: 1px solid $white-font-color;
 }
 
-.read-docs a{
+.read-docs a {
     color: $white-font-color;
 }
 
-// Why - Dayna
+// Why
 .why {
     background-color: $why-bg-color;
     color: $white-font-color;
@@ -134,24 +132,20 @@
     border: none;
 }
 
-.more-details button{
-    justify-content: center;   
-    align-items: center;  
+.more-details button {
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 14em;
     height: 3.8em;
     background-color: $design-font-color;
-
-
 }
 
 .more-details a {
     font-size: 1.2em;
     font-weight: bold;
     color: $white-font-color;
- }
-
-
+}
 
 // Stay Updated

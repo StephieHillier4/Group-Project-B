@@ -6,7 +6,6 @@
 }
 
 @mixin pushed-right {
-    // left: 28rem;
     left: 20rem;
 }
 
@@ -17,10 +16,9 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin: 1rem;
+    margin: 1rem 0.5rem;
     padding: 5rem 0;
     scroll-snap-align: start;
-    // border-radius: 3rem;
     border-radius: 1.5rem;
 }
 

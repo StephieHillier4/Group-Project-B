@@ -1,0 +1,443 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+main {
+    max-height: 98vh;
+    margin-top: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+@media (min-width: 72em) {
+    main {
+        max-height: 95vh;
+    }
+}
+body,
+h1,
+h2 {
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 48em) {
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+}
+@media (min-width: 64em) {
+    h2 {
+        font-size: 3.8rem;
+        margin: 0;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+.section .text-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+}
+
+.section img {
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+    right: -10rem;
+    top: -4rem;
+    transform: rotate(-10deg);
+}
+
+.site-nav {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 1.2rem;
+    top: 1.3rem;
+    transition: left 0.5s ease;
+}
+
+.site-nav img {
+    height: 3.2rem;
+    filter: brightness(0) invert(1);
+    margin: 0.5rem 0 0 0.5rem;
+    padding: 1rem;
+    vertical-align: bottom;
+}
+
+.site-nav a img {
+    padding-left: 0;
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-btn img:hover {
+    background-color: rgb(208, 218, 242);
+    border-radius: 50%;
+}
+
+.site-nav-list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 19rem;
+    height: 97vh;
+    margin: 0 1rem 2rem;
+    left: -100%;
+    background-color: rgb(21, 25, 43);
+    z-index: 50;
+    border-radius: 1.5rem;
+    transition: left 0.5s ease;
+}
+
+.site-nav-list img {
+    width: 1.1rem;
+    filter: brightness(0) invert(1);
+    vertical-align: top;
+    margin-right: 0.5rem;
+}
+
+.site-nav-list a {
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+}
+
+.site-nav-list li {
+    list-style-type: none;
+    padding: 1.1rem;
+}
+
+.site-nav-list li:last-of-type {
+    border-bottom: none;
+}
+
+.site-nav.toggled {
+    left: 29rem;
+}
+
+.site-nav-list.toggled {
+    left: 0;
+}
+
+.site-nav-top li {
+    border-bottom: rgb(68, 71, 85) solid 1px;
+    padding-left: 0;
+}
+
+.site-nav-bottom a,
+.site-nav-bottom p {
+    color: rgb(138, 140, 149);
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.8rem;
+}
+
+.site-nav-bottom li {
+    padding: 5px;
+}
+
+@media (min-width: 48em) {
+    .nav-btn {
+        display: none;
+    }
+    .site-nav {
+        left: 3rem;
+        top: 1.3rem;
+    }
+    .site-nav-list {
+        background-color: transparent;
+        transition: none;
+        left: 10rem;
+        top: 0.5rem;
+    }
+    .site-nav-top {
+        display: flex;
+        gap: 1rem;
+    }
+    .site-nav-list img,
+    .site-nav-bottom {
+        display: none;
+    }
+    .site-nav-top li {
+        border: none;
+    }
+    .menu-jobs {
+        display: none;
+    }
+}
+.side-nav {
+    position: fixed;
+    z-index: 10;
+    right: 1.5rem;
+    text-align: end;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.side-nav li {
+    list-style: none;
+    padding: 8px;
+}
+
+.side-nav li a {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    cursor: default;
+}
+
+.side-nav li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.side-nav li a::after {
+    content: "";
+    height: 3rem;
+    background-color: white;
+    position: relative;
+    padding: 2px;
+    margin-left: 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 48rem) {
+    .side-nav span {
+        display: none;
+    }
+}
+.site-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 1rem;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: left 5s ease;
+}
+
+.site-footer li {
+    list-style: none;
+}
+
+.site-footer img {
+    width: 1.1rem;
+    filter: brightness(0) invert(1);
+}
+
+.site-footer ul.social-media {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+.site-footer .footer-desktop {
+    display: none;
+}
+
+@media (min-width: 48em) {
+    .site-footer .footer-desktop {
+        display: block;
+    }
+    .site-footer {
+        justify-content: space-around;
+    }
+    .footer-desktop ul {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        margin: 0;
+    }
+    .footer-desktop a,
+    .footer-desktop p {
+        color: rgb(255, 255, 255);
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.8rem;
+    }
+}
+.site-footer.pushed {
+    left: 19.5rem;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+    padding: 5rem 0;
+    scroll-snap-align: start;
+    border-radius: 1.5rem;
+}
+
+@media (min-width: 30em) {
+    .section {
+        height: 97vh;
+        padding: 0;
+    }
+    .section img {
+        width: 80%;
+        z-index: 1;
+        right: -17rem;
+        top: -5rem;
+        transform: rotate(-5deg);
+    }
+}
+@media (min-width: 48em) {
+    .section {
+        height: 95vh;
+    }
+    .section .text-content {
+        width: 38rem;
+    }
+    .section img {
+        width: 50%;
+    }
+}
+@media (min-width: 64rem) {
+    .section p {
+        margin-right: 4rem;
+    }
+}
+.section.pushed {
+    left: 19.5rem;
+}
+
+.home {
+    background-color: rgb(225, 234, 249);
+    color: rgb(28, 83, 189);
+}
+
+.home h2 {
+    font-size: 96px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(33, 80, 190);
+    color: rgb(255, 255, 255);
+}
+
+.more-docs {
+    display: flex;
+    margin-right: 17em;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.more-docs button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 99;
+    width: 12em;
+    height: 3.8em;
+}
+
+.more-docs a {
+    font-size: 1.2em;
+}
+
+.learn-more a {
+    color: rgb(33, 80, 190);
+    font-weight: bold;
+}
+
+.learn-more {
+    border: none;
+}
+
+.read-docs {
+    background-color: rgb(33, 80, 190);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.read-docs a {
+    color: rgb(255, 255, 255);
+}
+
+.why {
+    background-color: rgb(21, 25, 43);
+    color: rgb(255, 255, 255);
+}
+
+.why p {
+    opacity: 0.8;
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 138, 145);
+    color: rgb(255, 255, 255);
+}
+
+.more-details {
+    margin-right: 15em;
+    margin-top: 1em;
+    border: none;
+}
+
+.more-details button {
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 99;
+    width: 14em;
+    height: 3.8em;
+    background-color: rgb(19, 25, 44);
+}
+
+.more-details a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=styles.css.map */
