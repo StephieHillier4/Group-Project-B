@@ -54,6 +54,52 @@
 // Home
 
 // About
+.about {
+    display: flex;
+    flex-direction: column;
+    background-color: $about-bg-color;
+    color: $white-font-color;
+}
+
+.more-docs {
+    display: flex;
+    margin-right: 17em;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.more-docs button{
+    display: flex;
+    justify-content: center;   
+    align-items: center;  
+    border-radius: 2rem;
+    z-index: 99;
+    width: 12em;
+    height: 3.8em;
+
+}
+
+.more-docs a {
+   font-size: 1.2em;
+}
+
+.learn-more a {
+    color: $about-bg-color;
+    font-weight: bold;
+}
+
+.learn-more {
+    border: none;
+}
+
+.read-docs{
+    background-color: $about-bg-color;
+    border: 1px solid $white-font-color;
+}
+
+.read-docs a{
+    color: $white-font-color;
+}
 
 // Why - Dayna
 .why {

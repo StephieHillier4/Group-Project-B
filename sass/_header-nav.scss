@@ -177,6 +177,11 @@
         cursor: default;
     }
 
+    li a:hover {
+        color: $white-font-color;
+        font-weight: bold;
+    }
+
     li a::after {
         content: "";
         height: 3rem;

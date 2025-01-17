@@ -36,7 +36,7 @@ h2 {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -216,6 +216,10 @@ button:hover {
   font-weight: 200;
   cursor: default;
 }
+.side-nav li a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
 .side-nav li a::after {
   content: "";
   height: 3rem;
@@ -325,6 +329,52 @@ button:hover {
 
 .section.pushed {
   left: 19.5rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(26, 73, 181);
+  color: rgb(255, 255, 255);
+}
+
+.more-docs {
+  display: flex;
+  margin-right: 17em;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.more-docs button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 99;
+  width: 12em;
+  height: 3.8em;
+}
+
+.more-docs a {
+  font-size: 1.2em;
+}
+
+.learn-more a {
+  color: rgb(26, 73, 181);
+  font-weight: bold;
+}
+
+.learn-more {
+  border: none;
+}
+
+.read-docs {
+  background-color: rgb(26, 73, 181);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.read-docs a {
+  color: rgb(255, 255, 255);
 }
 
 .why {
