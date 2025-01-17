@@ -14,7 +14,7 @@ h2 {
 
 p {
     // font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: $line-height;
 }
 
@@ -26,7 +26,9 @@ a {
 a:hover,
 button:hover {
     cursor: pointer;
+    
 }
+
 
 @media (min-width: 48em) {
     h2 {
