@@ -95,8 +95,6 @@ button:hover {
 
 .site-nav img {
   height: 3.2rem;
-  filter: brightness(0) invert(1);
-  margin: 0.5rem 0 0 0.5rem;
   padding: 1rem;
   vertical-align: bottom;
 }
@@ -110,7 +108,7 @@ button:hover {
   background-color: transparent;
 }
 
-.nav-btn img:hover {
+.nav-btn:hover {
   background-color: rgb(208, 218, 242);
   border-radius: 50%;
 }
@@ -185,6 +183,9 @@ button:hover {
     left: 10rem;
     top: 0.5rem;
   }
+  .site-nav-list a {
+    color: rgb(26, 73, 181);
+  }
   .site-nav-top {
     display: flex;
     gap: 1rem;
@@ -214,10 +215,10 @@ button:hover {
   padding: 8px;
 }
 .side-nav li a {
-  color: rgb(255, 255, 255);
+  color: rgb(26, 73, 181);
   padding: 10px;
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 400;
   cursor: default;
 }
 .side-nav li a:hover {
@@ -227,7 +228,7 @@ button:hover {
 .side-nav li a::after {
   content: "";
   height: 3rem;
-  background-color: white;
+  background-color: rgb(26, 73, 181);
   position: relative;
   padding: 2px;
   margin-left: 0.5rem;
@@ -254,7 +255,6 @@ button:hover {
 }
 .site-footer img {
   width: 1.1rem;
-  filter: brightness(0) invert(1);
 }
 .site-footer ul.social-media {
   display: flex;
@@ -281,7 +281,7 @@ button:hover {
   }
   .footer-desktop a,
   .footer-desktop p {
-    color: rgb(255, 255, 255);
+    color: rgb(26, 73, 181);
     font-family: "Roboto Mono", monospace;
     font-size: 0.8rem;
   }
@@ -292,6 +292,7 @@ button:hover {
 
 .section {
   display: flex;
+  height: 98vh;
   align-items: center;
   justify-content: center;
   position: relative;

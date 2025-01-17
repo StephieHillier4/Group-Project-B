@@ -12,6 +12,7 @@
 // Mixin for main sections
 @mixin section-layout {
     display: flex;
+    height: 98vh;
     align-items: center;
     justify-content: center;
     position: relative;

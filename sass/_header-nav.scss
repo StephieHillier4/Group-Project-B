@@ -13,8 +13,6 @@
 
 .site-nav img {
     height: 3.2rem;
-    filter: brightness(0) invert(1);
-    margin: 0.5rem 0 0 0.5rem;
     padding: 1rem;
     vertical-align: bottom;
 }
@@ -28,7 +26,7 @@
     background-color: transparent;
 }
 
-.nav-btn img:hover {
+.nav-btn:hover {
     background-color: $hamburger-hover-color;
     border-radius: 50%;
 }
@@ -44,6 +42,7 @@
     margin: 0 0.5rem;
     left: -100%;
     background-color: $why-bg-color;
+
     z-index: 50;
     border-radius: 1.5rem;
 
@@ -116,6 +115,10 @@
         transition: none;
         left: 10rem;
         top: 0.5rem;
+
+        a {
+            color: $home-nav-color;
+        }
     }
 
     .site-nav-top {
@@ -153,10 +156,10 @@
     }
 
     li a {
-        color: $white-font-color;
+        color: $home-nav-color;
         padding: 10px;
         font-size: 0.8rem;
-        font-weight: 200;
+        font-weight: 400;
         cursor: default;
     }
 
@@ -168,7 +171,7 @@
     li a::after {
         content: "";
         height: 3rem;
-        background-color: white;
+        background-color: $home-nav-color;
         position: relative;
         padding: 2px;
         margin-left: 0.5rem;
