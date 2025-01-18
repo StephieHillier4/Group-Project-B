@@ -431,11 +431,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   background-color: rgb(33, 41, 51);
-  color: rgb(94, 110, 180);
+  color: rgb(28, 83, 189);
 }
 
-.stay h2 p {
-  color: rgb(80, 93, 153);
+.stay p {
+  color: rgb(28, 83, 189);
 }
 
 .get-updates {
