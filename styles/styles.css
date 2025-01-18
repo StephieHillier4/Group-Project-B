@@ -341,7 +341,48 @@ button:hover {
   color: rgb(28, 83, 189);
 }
 .home h2 {
-  font-size: 96px;
+  font-size: 60px;
+  font-style: bold;
+}
+@media (min-width: 768px) and (max-width: 1030px) {
+  .home h2 {
+    font-size: 72px;
+    font-style: bold;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .home h2 {
+    font-size: 96px;
+    font-style: bold;
+  }
+}
+.home .arrow-icon-container {
+  position: absolute;
+  left: 30%;
+  bottom: 16%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.home .go-down-btn {
+  background-color: rgb(28, 83, 189);
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.home .go-down-btn:hover {
+  background-color: rgb(87, 128, 207);
+  transform: scale(1.1);
+}
+.home .go-down-btn img {
+  position: relative;
+  top: 3%;
+  left: 1%;
 }
 
 .about {
