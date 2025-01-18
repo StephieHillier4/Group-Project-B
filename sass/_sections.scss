@@ -56,8 +56,52 @@
     color: $home-font-color;
 
     h2 {
-        font-size: 96px;
+        font-size: 60px;
+        font-style: bold;
+
+        @media (min-width: 768px) and (max-width: 1030px) {
+            font-size: 72px;
+            font-style: bold;
+        }
+        
+        @media (min-width: 1024px) and (max-width: 1920px) {
+            font-size: 96px;
+            font-style: bold;
+        }
     }
+
+    .arrow-icon-container {
+        position: absolute;
+        left: 30%;
+        bottom: 16%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+    
+    .go-down-btn {
+        background-color: $home-font-color;
+        border: none;
+        border-radius: 50%; 
+        width: 54px; 
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .go-down-btn:hover {
+        background-color: $home-go-down-button-hover;
+        transform: scale(1.1);
+    }
+    
+    .go-down-btn img {
+        position: relative;
+        top: 3%;
+        left: 1%;
+    }
+    
 }
 
 // About
