@@ -424,7 +424,39 @@ button:hover {
 .more-details a {
   font-size: 1.2em;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: rgb(red, green, blue)
 }
 
+.stay {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(33, 41, 51);
+  color: rgb(94, 110, 180);
+}
+
+.stay h2 p {
+  color: rgb(80, 93, 153);
+}
+
+.get-updates {
+  margin-right: 15em;
+  margin-top: 1em;
+  border: none;
+}
+
+.get-updates button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 99;
+  width: 14em;
+  height: 3.8em;
+  background-color: rgb(33, 82, 155);
+}
+
+.get-updates a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
 /*# sourceMappingURL=styles.css.map */
