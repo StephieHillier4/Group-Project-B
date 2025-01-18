@@ -343,10 +343,10 @@ button:hover {
 .home h2 {
   font-size: 60px;
   font-style: bold;
+  margin-bottom: 0.5rem;
 }
-@media (min-width: 768px) and (max-width: 1030px) {
+@media (min-width: 768px) {
   .home h2 {
-    font-size: 72px;
     font-style: bold;
   }
 }
@@ -357,10 +357,7 @@ button:hover {
   }
 }
 .home .arrow-icon-container {
-  position: absolute;
-  left: 30%;
-  bottom: 16%;
-  transform: translateX(-50%);
+  margin-top: 2rem;
   z-index: 3;
 }
 .home .go-down-btn {
@@ -381,7 +378,7 @@ button:hover {
 }
 .home .go-down-btn img {
   position: relative;
-  top: 3%;
+  top: 8%;
   left: 1%;
 }
 
@@ -465,39 +462,7 @@ button:hover {
 .more-details a {
   font-size: 1.2em;
   font-weight: bold;
-  color: rgb(red, green, blue)
-}
-
-.stay {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(33, 41, 51);
-  color: rgb(28, 83, 189);
-}
-
-.stay p {
-  color: rgb(28, 83, 189);
-}
-
-.get-updates {
-  margin-right: 15em;
-  margin-top: 1em;
-  border: none;
-}
-
-.get-updates button {
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  z-index: 99;
-  width: 14em;
-  height: 3.8em;
-  background-color: rgb(33, 82, 155);
-}
-
-.get-updates a {
-  font-size: 1.2em;
-  font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
 /*# sourceMappingURL=styles.css.map */

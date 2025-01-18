@@ -58,9 +58,9 @@
     h2 {
         font-size: 60px;
         font-style: bold;
+        margin-bottom: 0.5rem;
 
-        @media (min-width: 768px) and (max-width: 1030px) {
-            font-size: 72px;
+        @media (min-width: 768px) {
             font-style: bold;
         }
         
@@ -71,10 +71,7 @@
     }
 
     .arrow-icon-container {
-        position: absolute;
-        left: 30%;
-        bottom: 16%;
-        transform: translateX(-50%);
+        margin-top: 2rem;
         z-index: 3;
     }
     
@@ -98,7 +95,7 @@
     
     .go-down-btn img {
         position: relative;
-        top: 3%;
+        top: 8%;
         left: 1%;
     }
     
