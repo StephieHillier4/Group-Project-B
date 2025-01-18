@@ -343,10 +343,10 @@ button:hover {
 .home h2 {
   font-size: 60px;
   font-style: bold;
+  margin-bottom: 0.5rem;
 }
-@media (min-width: 768px) and (max-width: 1030px) {
+@media (min-width: 768px) {
   .home h2 {
-    font-size: 72px;
     font-style: bold;
   }
 }
@@ -357,11 +357,8 @@ button:hover {
   }
 }
 .home .arrow-icon-container {
-  position: absolute;
-  left: 30%;
-  bottom: 16%;
-  transform: translateX(-50%);
-  z-index: 3;
+  display: inline-block;
+  margin-top: 2rem;
 }
 .home .go-down-btn {
   background-color: rgb(28, 83, 189);
@@ -375,14 +372,14 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.home .go-down-btn:hover {
+.home .arrow-icon-container:hover .go-down-btn {
   background-color: rgb(87, 128, 207);
   transform: scale(1.1);
 }
 .home .go-down-btn img {
   position: relative;
-  top: 3%;
-  left: 1%;
+  top: 5%;
+  left: 2%;
 }
 
 .about {

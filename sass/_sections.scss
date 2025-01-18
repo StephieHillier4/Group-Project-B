@@ -58,9 +58,9 @@
     h2 {
         font-size: 60px;
         font-style: bold;
+        margin-bottom: 0.5rem;
 
-        @media (min-width: 768px) and (max-width: 1030px) {
-            font-size: 72px;
+        @media (min-width: 768px) {
             font-style: bold;
         }
         
@@ -71,11 +71,8 @@
     }
 
     .arrow-icon-container {
-        position: absolute;
-        left: 30%;
-        bottom: 16%;
-        transform: translateX(-50%);
-        z-index: 3;
+        display:inline-block;
+        margin-top: 2rem;
     }
     
     .go-down-btn {
@@ -91,15 +88,15 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
     
-    .go-down-btn:hover {
+    .arrow-icon-container:hover .go-down-btn {
         background-color: $home-go-down-button-hover;
         transform: scale(1.1);
     }
     
     .go-down-btn img {
         position: relative;
-        top: 3%;
-        left: 1%;
+        top: 5%;
+        left: 2%;
     }
     
 }
