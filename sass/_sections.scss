@@ -71,8 +71,8 @@
     }
 
     .arrow-icon-container {
+        display:inline-block;
         margin-top: 2rem;
-        z-index: 3;
     }
     
     .go-down-btn {
@@ -88,15 +88,15 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
     
-    .go-down-btn:hover {
+    .arrow-icon-container:hover .go-down-btn {
         background-color: $home-go-down-button-hover;
         transform: scale(1.1);
     }
     
     .go-down-btn img {
         position: relative;
-        top: 8%;
-        left: 1%;
+        top: 5%;
+        left: 2%;
     }
     
 }
