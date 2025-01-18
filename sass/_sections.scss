@@ -63,10 +63,21 @@
 
 .more-docs {
     display: flex;
-    margin-right: 17em;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 2em;
     gap: 1em;
 }
+
+@media (min-width: 48em) {
+    .more-docs {
+        display: flex;
+        flex-direction: row;
+        margin-right: 21em;
+    }
+}
+
 
 .more-docs button{
     display: flex;
@@ -126,16 +137,20 @@
     border: none;
 }
 
-.more-details button{
-    justify-content: center;   
-    align-items: center;  
+.more-details button {
+    margin-left: 32em;
     border-radius: 2rem;
     z-index: 99;
-    width: 14em;
+    width: 12em;
     height: 3.8em;
     background-color: $design-font-color;
+    color: $white-font-color;
+}
 
-
+@media (min-width: 48em) {
+    .more-details button {
+      margin-left: -1em;
+    }
 }
 
 .more-details a {
