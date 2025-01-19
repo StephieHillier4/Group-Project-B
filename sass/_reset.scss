@@ -2,6 +2,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    height: 100vh;
 }
 
 *,
@@ -10,20 +11,15 @@ html {
     box-sizing: inherit;
 }
 
-// Remove margins on the body and avoid overflow
 body {
     margin: 0;
     overscroll-behavior: none;
 }
 
 main {
-    max-height: 98vh;
     margin-top: 0.5rem;
+    max-height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-
-    @media (min-width: 72em) {
-        max-height: 95vh;
-    }
 }

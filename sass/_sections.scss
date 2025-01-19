@@ -13,7 +13,7 @@
     }
 
     @media (min-width: 30em) {
-        height: 97vh;
+        height: 98.5vh;
         padding: 0;
 
         img {
@@ -26,8 +26,6 @@
     }
 
     @media (min-width: 48em) {
-        height: 95vh;
-
         .text-content {
             width: $article-width-desktop;
         }
@@ -63,7 +61,7 @@
         @media (min-width: 768px) {
             font-style: bold;
         }
-        
+
         @media (min-width: 1024px) and (max-width: 1920px) {
             font-size: 96px;
             font-style: bold;
@@ -71,15 +69,15 @@
     }
 
     .arrow-icon-container {
-        display:inline-block;
+        display: inline-block;
         margin-top: 2rem;
     }
-    
+
     .go-down-btn {
         background-color: $home-font-color;
         border: none;
-        border-radius: 50%; 
-        width: 54px; 
+        border-radius: 50%;
+        width: 54px;
         height: 54px;
         display: flex;
         justify-content: center;
@@ -87,18 +85,17 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    
+
     .arrow-icon-container:hover .go-down-btn {
         background-color: $home-go-down-button-hover;
         transform: scale(1.1);
     }
-    
+
     .go-down-btn img {
         position: relative;
         top: 5%;
         left: 2%;
     }
-    
 }
 
 // About
@@ -182,8 +179,7 @@
     height: 3.8em;
     background-color: $design-font-color;
 }
-
-.more-details a {
+.more-docs button .more-details a {
     font-size: 1.2em;
     font-weight: bold;
     color: $white-font-color;

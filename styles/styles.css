@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 *,
@@ -15,16 +16,11 @@ body {
 }
 
 main {
-  max-height: 98vh;
   margin-top: 0.5rem;
+  max-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-}
-@media (min-width: 72em) {
-  main {
-    max-height: 95vh;
-  }
 }
 
 body,
@@ -100,7 +96,6 @@ button:hover {
 .site-nav img {
   height: 3.2rem;
   padding: 1rem;
-  vertical-align: bottom;
 }
 
 .site-nav a img {
@@ -125,7 +120,7 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 18.3rem;
-  height: 97vh;
+  height: 98.5vh;
   margin: 0 0.5rem;
   left: -100%;
   background-color: rgb(21, 25, 43);
@@ -143,12 +138,12 @@ button:hover {
   color: rgb(255, 255, 255);
   font-size: 0.9rem;
 }
-.site-nav-list a:hover {
-  opacity: 0.8;
-}
 .site-nav-list li {
   list-style-type: none;
   padding: 1.1rem;
+}
+.site-nav-list li:hover {
+  opacity: 0.8;
 }
 .site-nav-list li:last-of-type {
   border-bottom: none;
@@ -175,7 +170,7 @@ button:hover {
   font-size: 0.8rem;
 }
 .site-nav-bottom li {
-  padding: 5px;
+  padding: 2px;
 }
 
 @media (min-width: 48em) {
@@ -198,6 +193,7 @@ button:hover {
   .site-nav-top {
     display: flex;
     gap: 1rem;
+    margin-top: 0.5rem;
   }
   .site-nav-list img,
   .site-nav-bottom {
@@ -227,7 +223,7 @@ button:hover {
   opacity: 0;
 }
 .side-nav span.active {
-  opacity: 1 !important;
+  opacity: 1;
 }
 .side-nav li a {
   opacity: 0.8;
@@ -260,7 +256,7 @@ button:hover {
 .site-footer {
   position: fixed;
   width: 100%;
-  bottom: 1rem;
+  bottom: 1.5rem;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -290,7 +286,8 @@ button:hover {
     display: block;
   }
   .site-footer {
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 96%;
   }
   .footer-desktop ul {
     display: flex;
@@ -323,7 +320,7 @@ button:hover {
 }
 @media (min-width: 30em) {
   .section {
-    height: 97vh;
+    height: 98.5vh;
     padding: 0;
   }
   .section img {
@@ -335,9 +332,6 @@ button:hover {
   }
 }
 @media (min-width: 48em) {
-  .section {
-    height: 95vh;
-  }
   .section .text-content {
     width: 38rem;
   }

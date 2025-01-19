@@ -47,6 +47,8 @@ function changeColor() {
         ([e]) => {
             if (e.isIntersecting) {
                 let currentSection = e.target.classList.value;
+                console.log(e.target);
+                console.log(currentSection);
                 if (
                     currentSection.includes("home") ||
                     currentSection.includes("stay updated")
@@ -94,29 +96,16 @@ function changeColor() {
 }
 
 const span = document.querySelectorAll("span");
-const test = document.getElementById("side-nav");
+const sideNav = document.getElementById("side-nav");
 
-test.addEventListener("mouseenter", function () {
+sideNav.addEventListener("mouseenter", function () {
     span.forEach((span) => {
         span.style.opacity = "0.8";
     });
 });
 
-test.addEventListener("mouseleave", function () {
+sideNav.addEventListener("mouseleave", function () {
     span.forEach((span) => {
         span.style.opacity = "0";
     });
 });
-
-// span.forEach((e) => {
-//     e.addEventListener("mouseover", function () {
-//         span.forEach((span) => {
-//             span.style.opacity = "0.8";
-//         });
-//     });
-//     e.addEventListener("mouseout", function () {
-//         span.forEach((span) => {
-//             span.style.opacity = "0";
-//         });
-//     });
-// });
