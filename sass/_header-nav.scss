@@ -12,11 +12,7 @@
 }
 
 .site-nav img {
-    // height: 4rem;
     height: 3.2rem;
-    filter: brightness(0) invert(1);
-    // margin: 1rem 0 0 0.5rem;
-    margin: 0.5rem 0 0 0.5rem;
     padding: 1rem;
     vertical-align: bottom;
 }
@@ -30,7 +26,7 @@
     background-color: transparent;
 }
 
-.nav-btn img:hover {
+.nav-btn:hover {
     background-color: $hamburger-hover-color;
     border-radius: 50%;
 }
@@ -41,20 +37,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // width: 27rem;
-    width: 19rem;
+    width: 18.3rem;
     height: 97vh;
-    margin: 0 1rem 2rem;
+    margin: 0 0.5rem;
     left: -100%;
     background-color: $why-bg-color;
+
     z-index: 50;
-    // border-radius: 3rem;
     border-radius: 1.5rem;
 
     transition: left 0.5s ease;
 
     img {
-        // width: 1.8rem;
         width: 1.1rem;
         filter: brightness(0) invert(1);
         vertical-align: top;
@@ -63,29 +57,21 @@
 
     a {
         color: $white-font-color;
-        // font-size: 1.4rem;
         font-size: 0.9rem;
     }
 
     li {
         list-style-type: none;
-        // padding: 1.7rem;
         padding: 1.1rem;
     }
 
     li:last-of-type {
         border-bottom: none;
     }
-
-    // @include mq($desktop) {
-    //     ul {
-    //         display: flex;
-    //     }
-    // }
 }
 
 .site-nav.toggled {
-    left: 29rem;
+    left: 20rem;
 }
 
 .site-nav-list.toggled {
@@ -96,6 +82,7 @@
     li {
         border-bottom: $border-bottom-color solid 1px;
         padding-left: 0;
+        margin-right: 0.5rem;
     }
 }
 
@@ -104,18 +91,15 @@
     p {
         color: $grey-font-color;
         font-family: $link-font;
-        // font-size: 18px;
         font-size: 0.8rem;
     }
 
     li {
-        // padding: 7px;
         padding: 5px;
     }
 }
 
 // Header in desktop view
-// @media (min-width: 72em) {
 @media (min-width: 48em) {
     .nav-btn {
         display: none;
@@ -129,9 +113,12 @@
     .site-nav-list {
         background-color: transparent;
         transition: none;
-        // left: 13rem;
         left: 10rem;
         top: 0.5rem;
+
+        a {
+            color: $home-nav-color;
+        }
     }
 
     .site-nav-top {
@@ -169,11 +156,10 @@
     }
 
     li a {
-        color: $white-font-color;
+        color: $home-nav-color;
         padding: 10px;
-        // font-size: 1.2rem;
         font-size: 0.8rem;
-        font-weight: 200;
+        font-weight: 400;
         cursor: default;
     }
 
@@ -185,16 +171,14 @@
     li a::after {
         content: "";
         height: 3rem;
-        background-color: white;
+        background-color: $home-nav-color;
         position: relative;
         padding: 2px;
         margin-left: 0.5rem;
-        // left: 10px;
         border-radius: 2rem;
         cursor: pointer;
     }
 
-    // @media (max-width: 1151px) {
     @media (max-width: 48rem) {
         span {
             display: none;

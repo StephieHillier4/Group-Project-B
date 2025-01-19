@@ -1,5 +1,7 @@
 // Colors
 $html-bg-color: rgb(255, 255, 255);
+$home-bg-color: rgb(225, 234, 249);
+$home-go-down-button-hover: rgb(87, 128, 207);
 $why-bg-color: rgb(21, 25, 43);
 $why-logo-color: rgb(40, 48, 78);
 $border-bottom-color: rgb(68, 71, 85);
@@ -9,7 +11,8 @@ $about-e-symbol: rgb(131, 185, 238);
 $design-bg-color: rgb(20, 138, 145);
 
 // Text Colors
-$home-font-color: rgb(26, 73, 181);
+$home-font-color: rgb(28, 83, 189);
+$home-nav-color: rgb(26, 73, 181);
 $design-font-color: rgb(19, 25, 44);
 $white-font-color: rgb(255, 255, 255);
 $grey-font-color: rgb(138, 140, 149);
@@ -26,7 +29,6 @@ $article-width-mobile: 90%;
 // $article-width-desktop: 80%;
 $article-width-desktop: 38rem;
 $text-margin: 4rem;
-
 
 // Media Query Breakpoints
 $desktop: em(1151);

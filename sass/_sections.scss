@@ -25,7 +25,6 @@
         }
     }
 
-    // @media (min-width: 72em) {
     @media (min-width: 48em) {
         height: 95vh;
 
@@ -46,12 +45,61 @@
 }
 
 .section.pushed {
-    left: 19.5rem;
+    left: 19rem;
 }
 
 // ----------- Please add your sections below
 
 // Home
+.home {
+    background-color: $home-bg-color;
+    color: $home-font-color;
+
+    h2 {
+        font-size: 60px;
+        font-style: bold;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 768px) {
+            font-style: bold;
+        }
+        
+        @media (min-width: 1024px) and (max-width: 1920px) {
+            font-size: 96px;
+            font-style: bold;
+        }
+    }
+
+    .arrow-icon-container {
+        display:inline-block;
+        margin-top: 2rem;
+    }
+    
+    .go-down-btn {
+        background-color: $home-font-color;
+        border: none;
+        border-radius: 50%; 
+        width: 54px; 
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .arrow-icon-container:hover .go-down-btn {
+        background-color: $home-go-down-button-hover;
+        transform: scale(1.1);
+    }
+    
+    .go-down-btn img {
+        position: relative;
+        top: 5%;
+        left: 2%;
+    }
+    
+}
 
 // About
 .about {
@@ -68,27 +116,18 @@
     gap: 1em;
 }
 
-@media (min-width: 48em) {
-    .more-docs {
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-
-.more-docs button{
+.more-docs button {
     display: flex;
-    justify-content: center;   
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
     height: 3.8em;
-
 }
 
 .more-docs a {
-   font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .learn-more a {
@@ -100,16 +139,16 @@
     border: none;
 }
 
-.read-docs{
+.read-docs {
     background-color: $about-bg-color;
     border: 1px solid $white-font-color;
 }
 
-.read-docs a{
+.read-docs a {
     color: $white-font-color;
 }
 
-// Why - Dayna
+// Why
 .why {
     background-color: $why-bg-color;
     color: $white-font-color;
@@ -134,13 +173,13 @@
 }
 
 .more-details button {
-    margin-left: 0.2em;
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
     height: 3.8em;
     background-color: $design-font-color;
-    color: $white-font-color;
 }
 
 
@@ -148,8 +187,6 @@
     font-size: 1.2em;
     font-weight: bold;
     color: $white-font-color;
- }
-
-
+}
 
 // Stay Updated
