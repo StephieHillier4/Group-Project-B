@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 100vh;
 }
 
 *,
@@ -17,7 +16,7 @@ body {
 
 main {
   margin-top: 0.5rem;
-  max-height: 100vh;
+  max-height: 99vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -219,12 +218,6 @@ button:hover {
   list-style: none;
   padding: 8px;
 }
-.side-nav span {
-  opacity: 0;
-}
-.side-nav span.active {
-  opacity: 1;
-}
 .side-nav li a {
   opacity: 0.8;
   color: rgb(26, 73, 181);
@@ -308,7 +301,7 @@ button:hover {
 
 .section {
   display: flex;
-  height: 98vh;
+  height: 98.5vh;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -319,10 +312,6 @@ button:hover {
   border-radius: 1.5rem;
 }
 @media (min-width: 30em) {
-  .section {
-    height: 98.5vh;
-    padding: 0;
-  }
   .section img {
     width: 80%;
     z-index: 1;
@@ -404,17 +393,11 @@ button:hover {
 
 .more-docs {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 2em;
   gap: 1em;
 }
 
-@media (min-width: 48em) {
-  .more-docs {
-    display: flex;
-    flex-direction: row;
-  }
-}
 .more-docs button {
   display: flex;
   justify-content: center;
@@ -468,13 +451,11 @@ button:hover {
 }
 
 .more-details button {
-  margin-left: 0.2em;
   border-radius: 2rem;
   z-index: 99;
   width: 12em;
   height: 3.8em;
   background-color: rgb(19, 25, 44);
-  color: rgb(255, 255, 255);
 }
 
 .more-details a {
