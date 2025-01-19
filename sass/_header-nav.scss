@@ -11,6 +11,10 @@
     transition: left 0.5s ease;
 }
 
+.site-nav:hover {
+    opacity: 0.8;
+}
+
 .site-nav img {
     height: 3.2rem;
     padding: 1rem;
@@ -29,6 +33,8 @@
 .nav-btn:hover {
     background-color: $hamburger-hover-color;
     border-radius: 50%;
+    padding: 0;
+    margin: 0 0.5rem;
 }
 
 // Toggle menu
@@ -58,6 +64,10 @@
     a {
         color: $white-font-color;
         font-size: 0.9rem;
+    }
+
+    a:hover {
+        opacity: 0.8;
     }
 
     li {

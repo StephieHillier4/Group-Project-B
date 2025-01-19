@@ -93,6 +93,10 @@ button:hover {
   transition: left 0.5s ease;
 }
 
+.site-nav:hover {
+  opacity: 0.8;
+}
+
 .site-nav img {
   height: 3.2rem;
   padding: 1rem;
@@ -111,6 +115,8 @@ button:hover {
 .nav-btn:hover {
   background-color: rgb(208, 218, 242);
   border-radius: 50%;
+  padding: 0;
+  margin: 0 0.5rem;
 }
 
 .site-nav-list {
@@ -136,6 +142,9 @@ button:hover {
 .site-nav-list a {
   color: rgb(255, 255, 255);
   font-size: 0.9rem;
+}
+.site-nav-list a:hover {
+  opacity: 0.8;
 }
 .site-nav-list li {
   list-style-type: none;
@@ -252,6 +261,9 @@ button:hover {
 }
 .site-footer li {
   list-style: none;
+}
+.site-footer a:hover {
+  opacity: 0.8;
 }
 .site-footer img {
   width: 1.1rem;
