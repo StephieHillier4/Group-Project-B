@@ -349,7 +349,6 @@ button:hover {
   .more-docs {
     display: flex;
     flex-direction: row;
-    margin-right: 21em;
   }
 }
 .more-docs button {
@@ -414,11 +413,6 @@ button:hover {
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 48em) {
-  .more-details button {
-    margin-left: -1em;
-  }
-}
 .more-details a {
   font-size: 1.2em;
   font-weight: bold;

@@ -72,7 +72,6 @@
     .more-docs {
         display: flex;
         flex-direction: row;
-        margin-right: 21em;
     }
 }
 
@@ -144,11 +143,6 @@
     color: $white-font-color;
 }
 
-@media (min-width: 48em) {
-    .more-details button {
-      margin-left: -1em;
-    }
-}
 
 .more-details a {
     font-size: 1.2em;

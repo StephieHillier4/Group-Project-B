@@ -1,245 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-nav">
+        <a href=""><img src="images/eco-logo.svg" alt="eco logo" /></a>
+        <button class="nav-btn" id="nav-btn">
+          <img
+            src="images/hamburger-icon.svg"
+            alt="Navigation menu icon"
+            id="navicon"
+          />
+        </button>
+      </div>
+      <nav class="site-nav-list">
+        <ul class="site-nav-top">
+          <li class="menu-blog">
+            <img src="images/blog-icon.svg" alt="Blog icon" />
+            <a href="">Blog</a>
+          </li>
+          <li class="menu-docs">
+            <img src="images/docs-icon.svg" alt="Docs icon" />
+            <a href="">Docs</a>
+          </li>
+          <li class="menu-forum">
+            <img src="images/forum-icon.svg" alt="Forum icon" /><a href=""
+              >Forum</a
+            >
+          </li>
+          <li class="menu-support">
+            <img src="images/support-icon.svg" alt="Support icon" /><a href=""
+              >Support</a
+            >
+          </li>
+          <li class="menu-jobs">
+            <img src="images/jobs-icon.svg" alt="Jobs icon" /><a href=""
+              >Jobs</a
+            >
+          </li>
+        </ul>
+        <ul class="site-nav-bottom">
+          <li><a href="">Contact</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms of Service</a></li>
+          <li>
+            <p>&copy; 2024 Eco</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Side Navigation -->
+      <nav class="side-nav" id="side-nav">
+        <ul>
+          <li>
+            <a href=""><span>Home</span></a>
+          </li>
+          <li>
+            <a href=""><span>About</span></a>
+          </li>
+          <li>
+            <a href=""><span>Why</span></a>
+          </li>
+          <li>
+            <a href=""><span>Design</span></a>
+          </li>
+          <li>
+            <a href=""><span>Stay Updated</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Home - Ricky -->
+      <section class="home-section" id="section">
+        <img
+          src="images/eco-logo.svg"
+          alt="eco symbol in the background"
+          class="e-bg-symbol"
         />
-        <link rel="stylesheet" href="styles/styles.css" />
-        <script src="scripts/script.js" defer></script>
-    </head>
+        <div class="text-content">
+          <h2>One Click. Full Send.</h2>
+          <p>
+            Eco enables apps to unlock stablecoin liquidity from any connected
+            chain and give users the simplest onchain experience.
+          </p>
+        </div>
 
-    <body>
-        <header class="site-header">
-            <div class="site-nav">
-                <a href=""><img src="images/eco-logo.svg" alt="eco logo" /></a>
-                <button class="nav-btn" id="nav-btn">
-                    <img
-                        src="images/hamburger-icon.svg"
-                        alt="Navigation menu icon"
-                        id="navicon"
-                    />
-                </button>
-            </div>
-            <nav class="site-nav-list">
-                <ul class="site-nav-top">
-                    <li class="menu-blog">
-                        <img src="images/blog-icon.svg" alt="Blog icon" />
-                        <a href="">Blog</a>
-                    </li>
-                    <li class="menu-docs">
-                        <img src="images/docs-icon.svg" alt="Docs icon" />
-                        <a href="">Docs</a>
-                    </li>
-                    <li class="menu-forum">
-                        <img src="images/forum-icon.svg" alt="Forum icon" /><a
-                            href=""
-                            >Forum</a
-                        >
-                    </li>
-                    <li class="menu-support">
-                        <img
-                            src="images/support-icon.svg"
-                            alt="Support icon"
-                        /><a href="">Support</a>
-                    </li>
-                    <li class="menu-jobs">
-                        <img src="images/jobs-icon.svg" alt="Jobs icon" /><a
-                            href=""
-                            >Jobs</a
-                        >
-                    </li>
-                </ul>
-                <ul class="site-nav-bottom">
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of Service</a></li>
-                    <li>
-                        <p>&copy; 2024 Eco</p>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <img
+          src="images/arrow-down.svg"
+          alt="arrow icon pointing down"
+          class="arrow-down"
+        />
+      </section>
 
-        <main>
-            <!-- Side Navigation -->
-            <nav class="side-nav" id="side-nav">
-                <ul>
-                    <li>
-                        <a href=""><span>Home</span></a>
-                    </li>
-                    <li>
-                        <a href=""><span>About</span></a>
-                    </li>
-                    <li>
-                        <a href=""><span>Why</span></a>
-                    </li>
-                    <li>
-                        <a href=""><span>Design</span></a>
-                    </li>
-                    <li>
-                        <a href=""><span>Stay Updated</span></a>
-                    </li>
-                </ul>
-            </nav>
+      <!--About - Steph  -->
+      <section class="about section">
+        <img
+          src="images/logo-about.svg"
+          alt="eco symbol in the background"
+          class="e-bg-symbol"
+        />
 
-            <!-- Home - Ricky -->
-            <section class="home-section" id="section">
-                <img
-                    src="images/eco-logo.svg"
-                    alt="eco symbol in the background"
-                    class="e-bg-symbol"
-                />
-                <div class="text-content">
-                    <h2>One Click. Full Send.</h2>
-                    <p>
-                        Eco enables apps to unlock stablecoin liquidity from any
-                        connected chain and give users the simplest onchain
-                        experience.
-                    </p>
-                </div>
+        <div class="text-content">
+          <h2>A protocol for stablecoins</h2>
 
-                <img
-                    src="images/arrow-down.svg"
-                    alt="arrow icon pointing down"
-                    class="arrow-down"
-                />
-            </section>
+          <p>And for the apps that use them</p>
 
-            <!--About - Steph  -->
-        <section class="about section" >
-            
-            <img
-            src="images/logo-about.svg"
-            alt="eco symbol in the background"
-            class="e-bg-symbol"
-            />   
-            
-            
-            <div class="text-content">   
-                <h2>A protocol for stablecoins</h2>
-   
-                <p>And for the apps that use them</p>
-               
-                <p>
-                  Eco is designed to be the default protocol for apps that use stablecoins
-                  or need stablecoin liquidity. Eco provides a frictionless stablecoin
-                  experience that accelerates user onboarding and streamlines money
-                  movement onchain.
-                </p>
-           
+          <p>
+            Eco is designed to be the default protocol for apps that use
+            stablecoins or need stablecoin liquidity. Eco provides a
+            frictionless stablecoin experience that accelerates user onboarding
+            and streamlines money movement onchain.
+          </p>
 
-            <div class="more-docs"> 
-                <button class="learn-more"><a href="https://eco.com/blog/">Learn More</a></button>
-                <button class="read-docs"><a href="https://eco.com/docs/home">Read Docs</a></button>
-             </div> 
+          <div class="more-docs">
+            <button class="learn-more">
+              <a href="https://eco.com/blog/">Learn More</a>
+            </button>
+            <button class="read-docs">
+              <a href="https://eco.com/docs/home">Read Docs</a>
+            </button>
+          </div>
+        </div>
+      </section>
 
-            </div>
-        </section>
-        
-        
-        
+      <!-- Why - Dayna -->
+      <section class="why section" id="section">
+        <img
+          src="images/logo-why.svg"
+          alt="eco symbol in the background"
+          class="e-bg-symbol"
+        />
+        <div class="text-content">
+          <h2>Attract liquidity, simplify UX, supercharge revenue</h2>
+          <p>
+            Integrate Eco to instantly aggregate liquidity in any supported
+            stablecoin from any connected rollup settling to Ethereum.
+          </p>
+          <p>
+            Integrate Eco to enable easy onboarding, intuitive balance
+            aggregation and one click send to anywhere, whatever your use case.
+            With Eco, you can focus on what matters: building something people
+            want.
+          </p>
+        </div>
+      </section>
 
+      <!-- Design - Steph -->
 
+      <section class="design section">
+        <img
+          src="images/logo-design.svg"
+          alt="eco symbol in the background"
+          class="e-bg-symbol"
+        />
 
-           
-            <!-- Why - Dayna -->
-            <section class="why section" id="section">
-                <img
-                    src="images/logo-why.svg"
-                    alt="eco symbol in the background"
-                    class="e-bg-symbol"
-                />
-                <div class="text-content">
-                    <h2>Attract liquidity, simplify UX, supercharge revenue</h2>
-                    <p>
-                        Integrate Eco to instantly aggregate liquidity in any
-                        supported stablecoin from any connected rollup settling
-                        to Ethereum.
-                    </p>
-                    <p>
-                        Integrate Eco to enable easy onboarding, intuitive
-                        balance aggregation and one click send to anywhere,
-                        whatever your use case. With Eco, you can focus on what
-                        matters: building something people want.
-                    </p>
-                </div>
-            </section>
+        <div class="text-content">
+          <h2 style="color: rgb(19, 25, 44)">
+            A full stack upgrade for transacting onchain
+          </h2>
 
-            <!-- Design - Steph -->
-             
-                <section class="design section" >
-            
-                    <img
-                    src="images/logo-design.svg"
-                    alt="eco symbol in the background"
-                    class="e-bg-symbol"
-                    />   
-                    
-                    
-                    <div class="text-content">   
-                        <h2 style="color: rgb(19, 25, 44)">A full stack upgrade for transacting onchain</h2>
-                       
-                        <p style="color: rgb(35, 44, 71)">
-                          The Eco Protocol is an Ethereum-based rollup and permissonless liquidity network designed from the ground up for the most capital efficient stablecoin transaction execution with the simplest possible user experience.
-                        </p>
-                    
-        
-                    <div class="more-details"> 
-                        <button class="more-details"><a href="https://eco.com/docs/home">More Details</a></button>
-                    </div>
-                     
-                    </div>
-                </section>
-                
-            
-            <!-- stay-updated-section -->
-            <section>
+          <p style="color: rgb(35, 44, 71)">
+            The Eco Protocol is an Ethereum-based rollup and permissonless
+            liquidity network designed from the ground up for the most capital
+            efficient stablecoin transaction execution with the simplest
+            possible user experience.
+          </p>
 
-            </section>
-        </main>
+          <div class="more-details">
+            <button class="more-details">
+              <a href="https://eco.com/docs/home">More Details</a>
+            </button>
+          </div>
+        </div>
+      </section>
 
-        <footer class="site-footer" id="site-footer">
-            <nav class="footer-desktop">
-                <ul>
-                    <li>
-                        <p>&copy; 2025 Eco</p>
-                    </li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Jobs</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of Service</a></li>
-                </ul>
-            </nav>
-            <ul class="social-media">
-                <li>
-                    <a href=""><img src="images/x-logo.svg" alt="X logo" /></a>
-                </li>
-                <li>
-                    <a href=""
-                        ><img src="images/discord-logo.svg" alt="Discord logo"
-                    /></a>
-                </li>
-                <li>
-                    <a href=""
-                        ><img
-                            src="images/linkedin-logo.svg"
-                            alt="Linkedin logo"
-                    /></a>
-                </li>
-                <li>
-                    <a href=""
-                        ><img
-                            src="images/facebook.logo.svg"
-                            alt="Facebook logo"
-                    /></a>
-                </li>
-            </ul>
-        </footer>
-    </body>
+      <!-- stay-updated-section -->
+      <section></section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <nav class="footer-desktop">
+        <ul>
+          <li>
+            <p>&copy; 2025 Eco</p>
+          </li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Jobs</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <ul class="social-media">
+        <li>
+          <a href=""><img src="images/x-logo.svg" alt="X logo" /></a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/discord-logo.svg" alt="Discord logo"
+          /></a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/linkedin-logo.svg" alt="Linkedin logo"
+          /></a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/facebook.logo.svg" alt="Facebook logo"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
