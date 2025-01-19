@@ -64,8 +64,6 @@
 .more-docs {
     display: flex;
     flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 2em;
     gap: 1em;
 }
@@ -132,13 +130,12 @@
 }
 
 .more-details {
-    margin-right: 15em;
     margin-top: 1em;
     border: none;
 }
 
 .more-details button {
-    margin-left: 32em;
+    margin-left: 0.2em;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
