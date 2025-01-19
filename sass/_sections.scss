@@ -108,15 +108,15 @@
 
 .more-docs {
     display: flex;
-    margin-right: 17em;
+    flex-direction: column;
     margin-top: 2em;
     gap: 1em;
 }
 
 .more-docs button {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
@@ -165,21 +165,21 @@
 }
 
 .more-details {
-    margin-right: 15em;
     margin-top: 1em;
     border: none;
 }
 
 .more-details button {
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     border-radius: 2rem;
     z-index: 99;
-    width: 14em;
+    width: 12em;
     height: 3.8em;
     background-color: $design-font-color;
 }
-.more-docs button .more-details a {
+
+.more-details a {
     font-size: 1.2em;
     font-weight: bold;
     color: $white-font-color;
