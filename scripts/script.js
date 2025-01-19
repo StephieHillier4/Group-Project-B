@@ -39,6 +39,7 @@ btnNav.addEventListener("click", function () {
 const mainBody = document.getElementById("site-wrapper");
 const colorChange = document.querySelectorAll(".colorChange");
 const headerDesktop = document.querySelectorAll(".site-nav-top a");
+let activeSpanId;
 
 mainBody.addEventListener("scroll", changeColor);
 
@@ -48,7 +49,7 @@ function changeColor() {
             if (e.isIntersecting) {
                 let currentSection = e.target.classList.value;
                 let navName = e.target.classList[0];
-                let activeSpanId = `nav-${navName}`;
+                activeSpanId = `nav-${navName}`;
 
                 span.forEach((span) => {
                     span.style.opacity = "0";
