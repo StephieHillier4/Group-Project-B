@@ -165,7 +165,16 @@
         padding: 8px;
     }
 
+    span {
+        opacity: 0;
+    }
+
+    span.active {
+        opacity: 1 !important;
+    }
+
     li a {
+        opacity: 0.8;
         color: $home-nav-color;
         padding: 10px;
         font-size: 0.8rem;

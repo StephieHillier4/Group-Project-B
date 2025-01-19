@@ -54,6 +54,7 @@ function changeColor() {
                     colorChange.forEach((colorChange) => {
                         colorChange.style.filter = `brightness(0) saturate(100%) invert(16%) sepia(59%) saturate(4955%) hue-rotate(223deg) brightness(90%) contrast(84%)`;
                     });
+
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
                             headerDesktop.style.color = `rgb(26, 73, 181)`;
@@ -66,6 +67,7 @@ function changeColor() {
                     colorChange.forEach((colorChange) => {
                         colorChange.style.filter = `brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(106%) contrast(101%)`;
                     });
+
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
                             headerDesktop.style.color = `rgb(255, 255, 255)`;
@@ -75,6 +77,7 @@ function changeColor() {
                     colorChange.forEach((colorChange) => {
                         colorChange.style.filter = `brightness(0) saturate(100%) invert(7%) sepia(29%) saturate(945%) hue-rotate(184deg) brightness(94%) contrast(94%)`;
                     });
+
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
                             headerDesktop.style.color = `rgb(20, 24, 39)`;
@@ -89,3 +92,31 @@ function changeColor() {
         observer.observe(section);
     });
 }
+
+const span = document.querySelectorAll("span");
+const test = document.getElementById("side-nav");
+
+test.addEventListener("mouseenter", function () {
+    span.forEach((span) => {
+        span.style.opacity = "0.8";
+    });
+});
+
+test.addEventListener("mouseleave", function () {
+    span.forEach((span) => {
+        span.style.opacity = "0";
+    });
+});
+
+// span.forEach((e) => {
+//     e.addEventListener("mouseover", function () {
+//         span.forEach((span) => {
+//             span.style.opacity = "0.8";
+//         });
+//     });
+//     e.addEventListener("mouseout", function () {
+//         span.forEach((span) => {
+//             span.style.opacity = "0";
+//         });
+//     });
+// });

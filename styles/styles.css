@@ -223,7 +223,14 @@ button:hover {
   list-style: none;
   padding: 8px;
 }
+.side-nav span {
+  opacity: 0;
+}
+.side-nav span.active {
+  opacity: 1 !important;
+}
 .side-nav li a {
+  opacity: 0.8;
   color: rgb(26, 73, 181);
   padding: 10px;
   font-size: 0.8rem;
