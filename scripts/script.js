@@ -47,8 +47,14 @@ function changeColor() {
         ([e]) => {
             if (e.isIntersecting) {
                 let currentSection = e.target.classList.value;
-                console.log(e.target);
-                console.log(currentSection);
+                let navName = e.target.classList[0];
+                let activeSpanId = `nav-${navName}`;
+
+                span.forEach((span) => {
+                    span.style.opacity = "0";
+                });
+                document.getElementById(activeSpanId).style.opacity = "1.0";
+
                 if (
                     currentSection.includes("home") ||
                     currentSection.includes("stay updated")
@@ -88,24 +94,26 @@ function changeColor() {
                 }
             }
         },
-        { threshold: 0.1 }
+        { rootMargin: "0px 0px -50% 0px", threshold: 0.3 }
     );
     section.forEach((section) => {
         observer.observe(section);
     });
+
+    const span = document.querySelectorAll("span");
+    const sideNav = document.getElementById("side-nav");
+
+    sideNav.addEventListener("mouseenter", function () {
+        span.forEach((span) => {
+            span.style.opacity = "0.8";
+        });
+    });
+
+    sideNav.addEventListener("mouseleave", function () {
+        span.forEach((span) => {
+            if (span.id !== activeSpanId) {
+                span.style.opacity = "0";
+            }
+        });
+    });
 }
-
-const span = document.querySelectorAll("span");
-const sideNav = document.getElementById("side-nav");
-
-sideNav.addEventListener("mouseenter", function () {
-    span.forEach((span) => {
-        span.style.opacity = "0.8";
-    });
-});
-
-sideNav.addEventListener("mouseleave", function () {
-    span.forEach((span) => {
-        span.style.opacity = "0";
-    });
-});
