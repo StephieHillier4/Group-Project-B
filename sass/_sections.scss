@@ -13,9 +13,6 @@
     }
 
     @media (min-width: 30em) {
-        height: 97vh;
-        padding: 0;
-
         img {
             width: 80%;
             z-index: 1;
@@ -26,8 +23,6 @@
     }
 
     @media (min-width: 48em) {
-        height: 95vh;
-
         .text-content {
             width: $article-width-desktop;
         }
@@ -56,7 +51,47 @@
     color: $home-font-color;
 
     h2 {
-        font-size: 96px;
+        font-size: 60px;
+        font-style: bold;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 768px) {
+            font-style: bold;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1920px) {
+            font-size: 96px;
+            font-style: bold;
+        }
+    }
+
+    .arrow-icon-container {
+        display: inline-block;
+        margin-top: 2rem;
+    }
+
+    .go-down-btn {
+        background-color: $home-font-color;
+        border: none;
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .arrow-icon-container:hover .go-down-btn {
+        background-color: $home-go-down-button-hover;
+        transform: scale(1.1);
+    }
+
+    .go-down-btn img {
+        position: relative;
+        top: 5%;
+        left: 2%;
     }
 }
 
@@ -70,7 +105,8 @@
 
 .more-docs {
     display: flex;
-    margin-right: 17em;
+    // flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 2em;
     gap: 1em;
 }
@@ -127,17 +163,16 @@
 }
 
 .more-details {
-    margin-right: 15em;
     margin-top: 1em;
     border: none;
 }
 
 .more-details button {
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     border-radius: 2rem;
     z-index: 99;
-    width: 14em;
+    width: 12em;
     height: 3.8em;
     background-color: $design-font-color;
 }

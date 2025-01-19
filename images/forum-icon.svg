@@ -1,2 +1,17 @@
-<?xml version="1.0" ?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 64 64" id="icons" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#231f20;}</style></defs><title/><path class="cls-1" d="M53,21H48V17a6,6,0,0,0-6-6H11a6,6,0,0,0-6,6V50a2,2,0,0,0,1.19,1.83A2.1,2.1,0,0,0,7,52a2,2,0,0,0,1.35-.52L18,42.7V46a6,6,0,0,0,6,6H45.42l10.51,6.69A2,2,0,0,0,57,59a1.94,1.94,0,0,0,1-.25A2,2,0,0,0,59,57V27A6,6,0,0,0,53,21ZM9,45.48V17a2,2,0,0,1,2-2H42a2,2,0,0,1,2,2V36a2,2,0,0,1-2,2H18a2,2,0,0,0-1.35.52Zm46,7.88-7.93-5A2,2,0,0,0,46,48H24a2,2,0,0,1-2-2V42H42a6,6,0,0,0,6-6V25h5a2,2,0,0,1,2,2Z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.2.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 108)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 46.5px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M302.1,186.2c0,25.7-20.8,46.5-46.5,46.5H115.9l-93.1,93.1V69.8c0-25.6,20.9-46.5,46.5-46.5h186.2c25.7,0,46.5,20.8,46.5,46.5v116.4Z"/>
+  <path class="st0" d="M395.2,186.2h46.5c25.7,0,46.5,20.8,46.5,46.5v256l-93.1-93.1h-139.6c-25.7,0-46.5-20.8-46.5-46.5v-23.3"/>
+</svg>
