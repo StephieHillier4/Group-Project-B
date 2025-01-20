@@ -463,4 +463,29 @@ button:hover {
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
+.stay {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(229, 236, 252);
+  color: rgb(42, 94, 204);
+}
+
+.get-updates button {
+  border-radius: 2rem;
+  z-index: 99;
+  width: 12em;
+  height: 3.8em;
+  background-color: rgb(25, 86, 179);
+  border: 0rem;
+  margin-left: -19.125rem;
+}
+
+.get-updates a {
+  color: aliceblue;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=styles.css.map */
