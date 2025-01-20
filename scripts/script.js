@@ -58,7 +58,7 @@ function changeColor() {
 
                 if (
                     currentSection.includes("home") ||
-                    currentSection.includes("stay updated")
+                    currentSection.includes("stay-updated")
                 ) {
                     colorChange.forEach((colorChange) => {
                         colorChange.style.filter = `brightness(0) saturate(100%) invert(16%) sepia(59%) saturate(4955%) hue-rotate(223deg) brightness(90%) contrast(84%)`;
