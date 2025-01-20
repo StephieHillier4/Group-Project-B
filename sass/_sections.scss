@@ -188,8 +188,8 @@
 .stay-updated {
     display: flex;
     flex-direction: column;
-    background-color: rgb(229, 236, 252);
-    color: rgb(42, 94, 204);
+    background-color: $stay-bg-color;
+    color: $stay-font-color;
 }
 
 .get-updates button {
@@ -197,13 +197,13 @@
     z-index: 99;
     width: 12em;
     height: 3.8em;
-    background-color: rgb(25, 86, 179);
+    background-color: $stay-button-color;
     border: 0rem;
     margin-left: -19.125rem;
 }
 
 .get-updates a {
-    color: aliceblue;
+    color: $html-bg-color;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: bold;
