@@ -26,19 +26,19 @@ $link-font: "Roboto Mono", monospace;
 
 // Typography
 $line-height: 1.5;
+$line-height-header: 1.1;
 
 // Article Layouts
-$article-width-mobile: 90%;
-// $article-width-desktop: 80%;
+// $article-width-mobile: 80%;
 $article-width-desktop: 38rem;
-$text-margin: 4rem;
+// $text-margin: 4rem;
 
 // Media Query Breakpoints
-$desktop: em(1151);
-$tabletLandscape: em(1024);
-$tabletPortrait: em(850);
-$phoneLandscape: em(670);
-$phonePortrait: em(420);
+// $desktop: em(1151);
+// $tabletLandscape: em(1024);
+// $tabletPortrait: em(850);
+// $phoneLandscape: em(670);
+// $phonePortrait: em(420);
 
 // Utility variables
 $link-hover-selector: "&:hover, &:focus, &:active";
