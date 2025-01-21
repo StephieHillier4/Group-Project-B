@@ -17,6 +17,7 @@ btnNav.addEventListener("click", function () {
         navicon.src = "images/hamburger-icon.svg";
     }
 
+    // Change opacity of the main sections upon navigation toggle
     section.forEach((section) => {
         section.classList.toggle("pushed");
         if (section.classList.contains("pushed")) {
@@ -29,6 +30,8 @@ btnNav.addEventListener("click", function () {
             });
         }
     });
+
+    // Push the footer to the right upon navigation toggle
     footer.classList.toggle("pushed");
 });
 
@@ -39,6 +42,17 @@ btnNav.addEventListener("click", function () {
 const mainBody = document.getElementById("site-wrapper");
 const colorChange = document.querySelectorAll(".colorChange");
 const headerDesktop = document.querySelectorAll(".site-nav-top a");
+const span = document.querySelectorAll("span");
+const sideNav = document.getElementById("side-nav");
+
+// Color Variables
+const blueFilter = `brightness(0) saturate(100%) invert(16%) sepia(59%) saturate(4955%) hue-rotate(223deg) brightness(90%) contrast(84%)`;
+const blueColor = `rgb(26, 73, 181)`;
+const whiteFilter = `brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(106%) contrast(101%)`;
+const whiteColor = `rgb(255, 255, 255)`;
+const navyFilter = `brightness(0) saturate(100%) invert(7%) sepia(29%) saturate(945%) hue-rotate(184deg) brightness(94%) contrast(94%)`;
+const navyColor = `rgb(20, 24, 39)`;
+
 let activeSpanId;
 
 mainBody.addEventListener("scroll", changeColor);
@@ -47,6 +61,7 @@ function changeColor() {
     const observer = new window.IntersectionObserver(
         ([e]) => {
             if (e.isIntersecting) {
+                // Highlight the name of the currently displayed section in the side nav
                 let currentSection = e.target.classList.value;
                 let navName = e.target.classList[0];
                 activeSpanId = `nav-${navName}`;
@@ -56,17 +71,18 @@ function changeColor() {
                 });
                 document.getElementById(activeSpanId).style.opacity = "1.0";
 
+                // Change the color of the navigation menus based on the currently displayed section
                 if (
                     currentSection.includes("home") ||
                     currentSection.includes("stay-updated")
                 ) {
                     colorChange.forEach((colorChange) => {
-                        colorChange.style.filter = `brightness(0) saturate(100%) invert(16%) sepia(59%) saturate(4955%) hue-rotate(223deg) brightness(90%) contrast(84%)`;
+                        colorChange.style.filter = blueFilter;
                     });
 
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
-                            headerDesktop.style.color = `rgb(26, 73, 181)`;
+                            headerDesktop.style.color = blueColor;
                         });
                     }
                 } else if (
@@ -74,22 +90,22 @@ function changeColor() {
                     currentSection.includes("why")
                 ) {
                     colorChange.forEach((colorChange) => {
-                        colorChange.style.filter = `brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(67deg) brightness(106%) contrast(101%)`;
+                        colorChange.style.filter = whiteFilter;
                     });
 
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
-                            headerDesktop.style.color = `rgb(255, 255, 255)`;
+                            headerDesktop.style.color = whiteColor;
                         });
                     }
                 } else if (currentSection.includes("design")) {
                     colorChange.forEach((colorChange) => {
-                        colorChange.style.filter = `brightness(0) saturate(100%) invert(7%) sepia(29%) saturate(945%) hue-rotate(184deg) brightness(94%) contrast(94%)`;
+                        colorChange.style.filter = navyFilter;
                     });
 
                     if (window.innerWidth >= 768) {
                         headerDesktop.forEach((headerDesktop) => {
-                            headerDesktop.style.color = `rgb(20, 24, 39)`;
+                            headerDesktop.style.color = navyColor;
                         });
                     }
                 }
@@ -101,9 +117,7 @@ function changeColor() {
         observer.observe(section);
     });
 
-    const span = document.querySelectorAll("span");
-    const sideNav = document.getElementById("side-nav");
-
+    // Make the entire side nav visible upon hovering over the area
     sideNav.addEventListener("mouseenter", function () {
         span.forEach((span) => {
             span.style.opacity = "0.8";
