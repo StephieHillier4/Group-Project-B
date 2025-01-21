@@ -193,6 +193,9 @@
 }
 
 .get-updates button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
