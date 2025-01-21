@@ -83,8 +83,9 @@ button:hover {
   z-index: 10;
   display: flex;
   flex-direction: row-reverse;
-  left: 1.2rem;
-  top: 1.3rem;
+  align-items: center;
+  left: 0.6rem;
+  top: 0.6rem;
   transition: left 0.5s ease;
 }
 
@@ -92,9 +93,10 @@ button:hover {
   opacity: 0.8;
 }
 
-.site-nav img {
-  height: 3.2rem;
+.site-nav a img {
+  height: 3.1rem;
   padding: 1rem;
+  margin: 0;
 }
 
 .site-nav a img {
@@ -104,13 +106,17 @@ button:hover {
 .nav-btn {
   border: none;
   background-color: transparent;
+  margin: 1rem 0.8rem 1rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.nav-btn img {
+  height: 1rem;
 }
 
 .nav-btn:hover {
   background-color: rgb(208, 218, 242);
   border-radius: 50%;
-  padding: 0;
-  margin: 0 0.5rem;
 }
 
 .site-nav-list {
@@ -160,6 +166,7 @@ button:hover {
   border-bottom: rgb(68, 71, 85) solid 1px;
   padding-left: 0;
   margin-right: 0.5rem;
+  font-weight: 350;
 }
 
 .site-nav-bottom a,
@@ -177,14 +184,14 @@ button:hover {
     display: none;
   }
   .site-nav {
-    left: 3rem;
-    top: 1.3rem;
+    left: 2.4rem;
+    top: 1rem;
   }
   .site-nav-list {
     background-color: transparent;
     transition: none;
-    left: 10rem;
-    top: 0.5rem;
+    left: 7.8rem;
+    top: 0.3rem;
   }
   .site-nav-list a {
     color: rgb(26, 73, 181);
@@ -208,41 +215,51 @@ button:hover {
 .side-nav {
   position: fixed;
   z-index: 10;
-  right: 1.5rem;
+  right: 1.8rem;
   text-align: end;
   display: flex;
   height: 100%;
   align-items: center;
 }
+.side-nav span {
+  visibility: hidden;
+}
 .side-nav li {
   list-style: none;
-  padding: 8px;
+  padding: 0.2rem;
 }
 .side-nav li a {
   opacity: 0.8;
-  color: rgb(26, 73, 181);
-  padding: 10px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  cursor: default;
-}
-.side-nav li a:hover {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
+  font-size: 0.7rem;
 }
 .side-nav li a::after {
   content: "";
-  height: 3rem;
   background-color: rgb(26, 73, 181);
   position: relative;
-  padding: 2px;
-  margin-left: 0.5rem;
+  padding: 1px;
   border-radius: 2rem;
   cursor: pointer;
 }
-@media (max-width: 48rem) {
+@media (min-width: 48rem) {
   .side-nav span {
-    display: none;
+    visibility: visible;
+  }
+  .side-nav li {
+    padding: 0.5rem;
+  }
+  .side-nav li a {
+    color: rgb(26, 73, 181);
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: default;
+  }
+  .side-nav li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .side-nav li a::after {
+    padding: 3px 2px;
+    margin-left: 0.5rem;
   }
 }
 
@@ -257,6 +274,7 @@ button:hover {
 }
 .site-footer li {
   list-style: none;
+  font-weight: 350;
 }
 .site-footer a:hover {
   opacity: 0.8;
@@ -269,6 +287,7 @@ button:hover {
   align-items: center;
   gap: 1.5rem;
   margin: 0;
+  padding: 0;
 }
 .site-footer .footer-desktop {
   display: none;
@@ -280,12 +299,12 @@ button:hover {
   }
   .site-footer {
     justify-content: space-between;
-    width: 96%;
+    width: 95%;
   }
   .footer-desktop ul {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.5rem;
     margin: 0;
   }
   .footer-desktop a,
@@ -482,7 +501,7 @@ button:hover {
 }
 
 .get-updates a {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: bold;
