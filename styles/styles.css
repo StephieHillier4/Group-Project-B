@@ -492,13 +492,15 @@ button:hover {
 }
 
 .get-updates button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 2rem;
   z-index: 99;
   width: 12em;
   height: 3.8em;
   background-color: rgb(25, 86, 179);
   border: 0rem;
-  margin-left: -19.125rem;
 }
 
 .get-updates a {

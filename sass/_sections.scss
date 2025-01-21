@@ -205,13 +205,15 @@
 }
 
 .get-updates button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
     height: 3.8em;
     background-color: $stay-button-color;
     border: 0rem;
-    margin-left: -19.125rem;
 }
 
 .get-updates a {
