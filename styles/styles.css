@@ -358,18 +358,18 @@ button:hover {
   background-color: rgb(225, 234, 249);
   color: rgb(28, 83, 189);
 }
-.home h2 {
+.home h1 {
   font-size: 60px;
   font-style: bold;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .home h2 {
+  .home h1 {
     font-style: bold;
   }
 }
 @media (min-width: 1024px) and (max-width: 1920px) {
-  .home h2 {
+  .home h1 {
     font-size: 96px;
     font-style: bold;
   }
