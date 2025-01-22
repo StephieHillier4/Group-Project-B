@@ -24,7 +24,7 @@ main {
 
 .section .text-content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 .section img {
@@ -135,7 +135,7 @@ button:active {
   height: 98.5vh;
   left: -100%;
   background-color: rgb(21, 25, 43);
-  z-index: 50;
+  z-index: 20;
   border-radius: 1.5rem;
   transition: left 0.5s ease;
 }
@@ -268,7 +268,7 @@ button:active {
   position: fixed;
   width: 100%;
   bottom: 1.5rem;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   justify-content: center;
   transition: left 5s ease;
@@ -414,8 +414,10 @@ button:active {
 .more-docs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 2em;
   gap: 1em;
+  width: 57%;
 }
 
 .more-docs button {
@@ -432,13 +434,23 @@ button:active {
   font-size: 1.2em;
 }
 
-.learn-more a {
+button.learn-more a {
   color: rgb(33, 80, 190);
   font-weight: bold;
+  display: block;
 }
 
-.learn-more {
+button.learn-more {
   border: none;
+  width: 12em;
+  height: 3.8em;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.learn-more:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .read-docs {
@@ -465,18 +477,36 @@ button:active {
   background-color: rgb(20, 138, 145);
   color: rgb(255, 255, 255);
 }
+.design h2 {
+  color: rgb(19, 25, 44);
+  font-weight: 500;
+}
+.design p {
+  color: rgb(35, 44, 71);
+}
+.design img {
+  opacity: 0.45;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(45%) saturate(350%) hue-rotate(150deg) brightness(82%) contrast(90%);
+}
 
 .more-details {
   margin-top: 1em;
   border: none;
 }
 
-.more-details button {
+button.more-details {
   border-radius: 2rem;
   z-index: 99;
-  width: 12em;
+  width: 13.5em;
   height: 3.8em;
   background-color: rgb(19, 25, 44);
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.more-details:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .more-details a {
@@ -502,6 +532,13 @@ button:active {
   height: 3.8em;
   background-color: rgb(25, 86, 179);
   border: 0rem;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.get-updates:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .get-updates a {
