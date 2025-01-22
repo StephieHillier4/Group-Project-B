@@ -16,7 +16,7 @@
     }
 
     a:hover {
-        opacity: 0.8;
+        opacity: $low-opacity;
     }
 
     img {
@@ -34,30 +34,28 @@
     .footer-desktop {
         display: none;
     }
-}
 
-@media (min-width: 48em) {
-    .site-footer .footer-desktop {
-        display: block;
-    }
-
-    .site-footer {
+    @include mq($tablet) {
         justify-content: space-between;
         width: 95%;
-    }
 
-    .footer-desktop ul {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin: 0;
-    }
+        .footer-desktop {
+            display: block;
 
-    .footer-desktop a,
-    .footer-desktop p {
-        color: $home-nav-color;
-        font-family: $link-font;
-        font-size: 0.8rem;
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 0;
+            }
+
+            a,
+            p {
+                color: $home-nav-color;
+                font-family: $link-font;
+                font-size: 0.8rem;
+            }
+        }
     }
 }
 

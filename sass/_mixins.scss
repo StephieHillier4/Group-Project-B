@@ -1,14 +1,5 @@
 @use "variables" as *;
 
-// Mixin for toggle menu
-@mixin toggle-transition {
-    transition: left 5s ease;
-}
-
-@mixin pushed-right {
-    left: 20rem;
-}
-
 // Mixin for main sections
 @mixin section-layout {
     display: flex;
@@ -36,4 +27,11 @@
     right: -45%;
     top: -9%;
     transform: rotate(-10deg);
+}
+
+// Mixin for Media Query
+@mixin mq($w) {
+    @media (min-width: $w) {
+        @content;
+    }
 }
