@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 body,
 h1,
@@ -9,12 +10,26 @@ h2 {
 
 h2 {
     font-size: 2.3rem;
-    font-weight: 400;
+    font-weight: $medium-font-weight;
+
+    @include mq($tablet) {
+        font-size: 3rem;
+        font-weight: $bold-font-weight;
+    }
+
+    @include mq($laptop) {
+        font-size: 3.8rem;
+        margin: 0;
+    }
 }
 
 p {
-    font-weight: 400;
+    font-weight: $medium-font-weight;
     line-height: $line-height;
+
+    @include mq($laptop) {
+        font-size: 1.2rem;
+    }
 }
 
 a {
@@ -22,25 +37,9 @@ a {
     text-decoration: none;
 }
 
-a:hover,
-button:hover {
-    cursor: pointer;
-}
-
-@media (min-width: 48em) {
-    h2 {
-        font-size: 3rem;
-        font-weight: 500;
-    }
-}
-
-@media (min-width: 64em) {
-    h2 {
-        font-size: 3.8rem;
-        margin: 0;
-    }
-
-    p {
-        font-size: 1.2rem;
+a,
+button {
+    #{$link-hover-selector} {
+        cursor: pointer;
     }
 }

@@ -27,6 +27,10 @@ $link-font: "Roboto Mono", monospace;
 // Typography
 $line-height: 1.5;
 $line-height-header: 1.1;
+$low-opacity: 0.8;
+$light-font-weight: 300;
+$medium-font-weight: 400;
+$bold-font-weight: 500;
 
 // Article Layouts
 // $article-width-mobile: 80%;
@@ -34,11 +38,10 @@ $article-width-desktop: 38rem;
 // $text-margin: 4rem;
 
 // Media Query Breakpoints
-// $desktop: em(1151);
-// $tabletLandscape: em(1024);
-// $tabletPortrait: em(850);
-// $phoneLandscape: em(670);
-// $phonePortrait: em(420);
+$mobileLarge: 30em;
+$tablet: 48em;
+$laptop: 64em;
+$laptopLarge: 120em;
 
 // Utility variables
-$link-hover-selector: "&:hover, &:focus, &:active";
+$link-hover-selector: "&:hover, &:active";
