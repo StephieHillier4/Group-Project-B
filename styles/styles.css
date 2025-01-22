@@ -15,22 +15,18 @@ body {
 }
 
 main {
-  max-height: 98vh;
   margin-top: 0.5rem;
+  max-height: 99vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-}
-@media (min-width: 72em) {
-  main {
-    max-height: 95vh;
-  }
 }
 
 body,
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
+  line-height: 1.1;
 }
 
 h2 {
@@ -71,15 +67,14 @@ button:hover {
 .section .text-content {
   position: relative;
   z-index: 2;
-  width: 90%;
 }
 
 .section img {
   position: absolute;
   width: 90%;
   z-index: 1;
-  right: -10rem;
-  top: -4rem;
+  right: -45%;
+  top: -9%;
   transform: rotate(-10deg);
 }
 
@@ -88,15 +83,20 @@ button:hover {
   z-index: 10;
   display: flex;
   flex-direction: row-reverse;
-  left: 1.2rem;
-  top: 1.3rem;
+  align-items: center;
+  left: 0.6rem;
+  top: 0.6rem;
   transition: left 0.5s ease;
 }
 
-.site-nav img {
-  height: 3.2rem;
+.site-nav:hover {
+  opacity: 0.8;
+}
+
+.site-nav a img {
+  height: 3.1rem;
   padding: 1rem;
-  vertical-align: bottom;
+  margin: 0;
 }
 
 .site-nav a img {
@@ -106,6 +106,12 @@ button:hover {
 .nav-btn {
   border: none;
   background-color: transparent;
+  margin: 1rem 0.8rem 1rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.nav-btn img {
+  height: 1rem;
 }
 
 .nav-btn:hover {
@@ -119,7 +125,7 @@ button:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 18.3rem;
-  height: 97vh;
+  height: 98.5vh;
   margin: 0 0.5rem;
   left: -100%;
   background-color: rgb(21, 25, 43);
@@ -141,6 +147,9 @@ button:hover {
   list-style-type: none;
   padding: 1.1rem;
 }
+.site-nav-list li:hover {
+  opacity: 0.8;
+}
 .site-nav-list li:last-of-type {
   border-bottom: none;
 }
@@ -157,6 +166,7 @@ button:hover {
   border-bottom: rgb(68, 71, 85) solid 1px;
   padding-left: 0;
   margin-right: 0.5rem;
+  font-weight: 350;
 }
 
 .site-nav-bottom a,
@@ -166,7 +176,7 @@ button:hover {
   font-size: 0.8rem;
 }
 .site-nav-bottom li {
-  padding: 5px;
+  padding: 2px;
 }
 
 @media (min-width: 48em) {
@@ -174,14 +184,14 @@ button:hover {
     display: none;
   }
   .site-nav {
-    left: 3rem;
-    top: 1.3rem;
+    left: 2.4rem;
+    top: 1rem;
   }
   .site-nav-list {
     background-color: transparent;
     transition: none;
-    left: 10rem;
-    top: 0.5rem;
+    left: 7.8rem;
+    top: 0.3rem;
   }
   .site-nav-list a {
     color: rgb(26, 73, 181);
@@ -189,6 +199,7 @@ button:hover {
   .site-nav-top {
     display: flex;
     gap: 1rem;
+    margin-top: 0.5rem;
   }
   .site-nav-list img,
   .site-nav-bottom {
@@ -204,47 +215,58 @@ button:hover {
 .side-nav {
   position: fixed;
   z-index: 10;
-  right: 1.5rem;
+  right: 1.8rem;
   text-align: end;
   display: flex;
   height: 100%;
   align-items: center;
 }
+.side-nav span {
+  visibility: hidden;
+}
 .side-nav li {
   list-style: none;
-  padding: 8px;
+  padding: 0.2rem;
 }
 .side-nav li a {
-  color: rgb(26, 73, 181);
-  padding: 10px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  cursor: default;
-}
-.side-nav li a:hover {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
+  opacity: 0.8;
+  font-size: 0.7rem;
 }
 .side-nav li a::after {
   content: "";
-  height: 3rem;
   background-color: rgb(26, 73, 181);
   position: relative;
-  padding: 2px;
-  margin-left: 0.5rem;
+  padding: 1px;
   border-radius: 2rem;
   cursor: pointer;
 }
-@media (max-width: 48rem) {
+@media (min-width: 48rem) {
   .side-nav span {
-    display: none;
+    visibility: visible;
+  }
+  .side-nav li {
+    padding: 0.5rem;
+  }
+  .side-nav li a {
+    color: rgb(26, 73, 181);
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: default;
+  }
+  .side-nav li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .side-nav li a::after {
+    padding: 3px 2px;
+    margin-left: 0.5rem;
   }
 }
 
 .site-footer {
   position: fixed;
   width: 100%;
-  bottom: 1rem;
+  bottom: 1.5rem;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -252,6 +274,10 @@ button:hover {
 }
 .site-footer li {
   list-style: none;
+  font-weight: 350;
+}
+.site-footer a:hover {
+  opacity: 0.8;
 }
 .site-footer img {
   width: 1.1rem;
@@ -261,6 +287,7 @@ button:hover {
   align-items: center;
   gap: 1.5rem;
   margin: 0;
+  padding: 0;
 }
 .site-footer .footer-desktop {
   display: none;
@@ -271,12 +298,13 @@ button:hover {
     display: block;
   }
   .site-footer {
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 95%;
   }
   .footer-desktop ul {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.5rem;
     margin: 0;
   }
   .footer-desktop a,
@@ -292,43 +320,33 @@ button:hover {
 
 .section {
   display: flex;
-  height: 98vh;
+  height: 98.5vh;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
   margin: 1rem 0.5rem;
-  padding: 5rem 0;
+  padding: 0 2rem 0 1.5rem;
   scroll-snap-align: start;
   border-radius: 1.5rem;
 }
 @media (min-width: 30em) {
-  .section {
-    height: 97vh;
-    padding: 0;
-  }
   .section img {
     width: 80%;
-    z-index: 1;
-    right: -17rem;
-    top: -5rem;
+    right: -25%;
+    top: -13%;
     transform: rotate(-5deg);
   }
 }
 @media (min-width: 48em) {
-  .section {
-    height: 95vh;
-  }
   .section .text-content {
     width: 38rem;
   }
   .section img {
     width: 50%;
   }
-}
-@media (min-width: 64rem) {
-  .section p {
-    margin-right: 4rem;
+  .section h2 {
+    margin: 1.5rem 0;
   }
 }
 
@@ -340,18 +358,18 @@ button:hover {
   background-color: rgb(225, 234, 249);
   color: rgb(28, 83, 189);
 }
-.home h2 {
+.home h1 {
   font-size: 60px;
   font-style: bold;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .home h2 {
+  .home h1 {
     font-style: bold;
   }
 }
 @media (min-width: 1024px) and (max-width: 1920px) {
-  .home h2 {
+  .home h1 {
     font-size: 96px;
     font-style: bold;
   }
@@ -388,20 +406,17 @@ button:hover {
   background-color: rgb(33, 80, 190);
   color: rgb(255, 255, 255);
 }
+.about p {
+  font-weight: 300;
+}
 
 .more-docs {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 2em;
   gap: 1em;
 }
 
-@media (min-width: 48em) {
-  .more-docs {
-    display: flex;
-    flex-direction: row;
-  }
-}
 .more-docs button {
   display: flex;
   justify-content: center;
@@ -440,6 +455,7 @@ button:hover {
 }
 .why p {
   opacity: 0.8;
+  font-weight: 300;
 }
 
 .design {
@@ -455,19 +471,43 @@ button:hover {
 }
 
 .more-details button {
-  margin-left: 0.2em;
   border-radius: 2rem;
   z-index: 99;
   width: 12em;
   height: 3.8em;
   background-color: rgb(19, 25, 44);
-  color: rgb(255, 255, 255);
 }
 
 .more-details a {
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(255, 255, 255);
+}
+
+.stay-updated {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(229, 236, 252);
+  color: rgb(42, 94, 204);
+}
+
+.get-updates button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  z-index: 99;
+  width: 12em;
+  height: 3.8em;
+  background-color: rgb(25, 86, 179);
+  border: 0rem;
+}
+
+.get-updates a {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,7 @@ body,
 h1,
 h2 {
     font-family: $main-font;
+    line-height: $line-height-header;
 }
 
 h2 {
@@ -43,10 +44,3 @@ button:hover {
         font-size: 1.2rem;
     }
 }
-
-// @media (min-width: 72em) {
-//     h2 {
-//         font-size: 4.7rem;
-//         margin: 0;
-//     }
-// }

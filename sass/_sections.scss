@@ -13,21 +13,17 @@
     }
 
     @media (min-width: 30em) {
-        height: 97vh;
-        padding: 0;
-
         img {
             width: 80%;
-            z-index: 1;
-            right: -17rem;
-            top: -5rem;
+            // right: -17rem;
+            // top: -5rem;
+            right: -25%;
+            top: -13%;
             transform: rotate(-5deg);
         }
     }
 
     @media (min-width: 48em) {
-        height: 95vh;
-
         .text-content {
             width: $article-width-desktop;
         }
@@ -35,13 +31,17 @@
         img {
             width: 50%;
         }
-    }
 
-    @media (min-width: 64rem) {
-        p {
-            margin-right: $text-margin;
+        h2 {
+            margin: 1.5rem 0;
         }
     }
+
+    // @media (min-width: 64rem) {
+    //     p {
+    //         margin-right: $text-margin;
+    //     }
+    // }
 }
 
 .section.pushed {
@@ -55,7 +55,7 @@
     background-color: $home-bg-color;
     color: $home-font-color;
 
-    h2 {
+    h1 {
         font-size: 60px;
         font-style: bold;
         margin-bottom: 0.5rem;
@@ -63,7 +63,7 @@
         @media (min-width: 768px) {
             font-style: bold;
         }
-        
+
         @media (min-width: 1024px) and (max-width: 1920px) {
             font-size: 96px;
             font-style: bold;
@@ -71,15 +71,15 @@
     }
 
     .arrow-icon-container {
-        display:inline-block;
+        display: inline-block;
         margin-top: 2rem;
     }
-    
+
     .go-down-btn {
         background-color: $home-font-color;
         border: none;
-        border-radius: 50%; 
-        width: 54px; 
+        border-radius: 50%;
+        width: 54px;
         height: 54px;
         display: flex;
         justify-content: center;
@@ -87,18 +87,17 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    
+
     .arrow-icon-container:hover .go-down-btn {
         background-color: $home-go-down-button-hover;
         transform: scale(1.1);
     }
-    
+
     .go-down-btn img {
         position: relative;
         top: 5%;
         left: 2%;
     }
-    
 }
 
 // About
@@ -107,19 +106,24 @@
     flex-direction: column;
     background-color: $about-bg-color;
     color: $white-font-color;
+
+    p {
+        font-weight: 300;
+    }
 }
 
 .more-docs {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 2em;
     gap: 1em;
 }
 
 .more-docs button {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 2rem;
     z-index: 99;
     width: 12em;
@@ -153,8 +157,11 @@
     background-color: $why-bg-color;
     color: $white-font-color;
 
+    h2 {
+    }
     p {
         opacity: 0.8;
+        font-weight: 300;
     }
 }
 
@@ -182,7 +189,6 @@
     background-color: $design-font-color;
 }
 
-
 .more-details a {
     font-size: 1.2em;
     font-weight: bold;
@@ -190,3 +196,29 @@
 }
 
 // Stay Updated
+
+.stay-updated {
+    display: flex;
+    flex-direction: column;
+    background-color: $stay-bg-color;
+    color: $stay-font-color;
+}
+
+.get-updates button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 99;
+    width: 12em;
+    height: 3.8em;
+    background-color: $stay-button-color;
+    border: 0rem;
+}
+
+.get-updates a {
+    color: $html-bg-color;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
