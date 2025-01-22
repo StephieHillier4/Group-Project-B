@@ -6,34 +6,45 @@
     z-index: 10;
     display: flex;
     flex-direction: row-reverse;
-    left: 1.2rem;
-    top: 1.3rem;
+    align-items: center;
+    left: 0.6rem;
+    top: 0.6rem;
     transition: left 0.5s ease;
-}
 
-.site-nav:hover {
-    opacity: 0.8;
-}
+    #{$link-hover-selector} {
+        opacity: $low-opacity;
+    }
 
-.site-nav img {
-    height: 3.2rem;
-    padding: 1rem;
-}
+    @include mq($tablet) {
+        left: 2.4rem;
+        top: 1rem;
+    }
 
-.site-nav a img {
-    padding-left: 0;
+    a img {
+        height: 3.1rem;
+        padding: 1rem 1rem 1rem 0;
+        margin: 0;
+    }
 }
 
 .nav-btn {
     border: none;
     background-color: transparent;
-}
+    margin: 1rem 0.8rem 1rem;
+    padding: 0.4rem 0.5rem;
 
-.nav-btn:hover {
-    background-color: $hamburger-hover-color;
-    border-radius: 50%;
-    padding: 0;
-    margin: 0 0.5rem;
+    img {
+        height: 1rem;
+    }
+
+    #{$link-hover-selector} {
+        background-color: $hamburger-hover-color;
+        border-radius: 50%;
+    }
+
+    @include mq($tablet) {
+        display: none;
+    }
 }
 
 // Toggle menu
@@ -42,15 +53,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 0.5rem;
     width: 18.3rem;
     height: 98.5vh;
-    margin: 0 0.5rem;
     left: -100%;
     background-color: $why-bg-color;
-
-    z-index: 50;
+    z-index: 20;
     border-radius: 1.5rem;
-
     transition: left 0.5s ease;
 
     img {
@@ -68,14 +77,25 @@
     li {
         list-style-type: none;
         padding: 1.1rem;
-    }
 
-    li:hover {
-        opacity: 0.8;
+        #{$link-hover-selector} {
+            opacity: $low-opacity;
+        }
     }
 
     li:last-of-type {
         border-bottom: none;
+    }
+
+    @include mq($tablet) {
+        background-color: transparent;
+        transition: none;
+        left: 7.8rem;
+        top: 0.3rem;
+
+        a {
+            color: $home-nav-color;
+        }
     }
 }
 
@@ -92,6 +112,17 @@
         border-bottom: $border-bottom-color solid 1px;
         padding-left: 0;
         margin-right: 0.5rem;
+        font-weight: 350;
+    }
+
+    @include mq($tablet) {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+
+        li {
+            border: none;
+        }
     }
 }
 
@@ -108,43 +139,9 @@
     }
 }
 
-// Header in desktop view
-@media (min-width: 48em) {
-    .nav-btn {
-        display: none;
-    }
-
-    .site-nav {
-        left: 3rem;
-        top: 1.3rem;
-    }
-
-    .site-nav-list {
-        background-color: transparent;
-        transition: none;
-        left: 10rem;
-        top: 0.5rem;
-
-        a {
-            color: $home-nav-color;
-        }
-    }
-
-    .site-nav-top {
-        display: flex;
-        gap: 1rem;
-        margin-top: 0.5rem;
-    }
-
+@include mq($tablet) {
     .site-nav-list img,
-    .site-nav-bottom {
-        display: none;
-    }
-
-    .site-nav-top li {
-        border: none;
-    }
-
+    .site-nav-bottom,
     .menu-jobs {
         display: none;
     }
@@ -154,45 +151,59 @@
 .side-nav {
     position: fixed;
     z-index: 10;
-    right: 1.5rem;
-    text-align: end;
     display: flex;
-    height: 100%;
     align-items: center;
+    right: 1.8rem;
+    text-align: end;
+    height: 100%;
+
+    span {
+        visibility: hidden;
+    }
 
     li {
         list-style: none;
-        padding: 8px;
+        padding: 0.2rem;
+
+        a {
+            opacity: $low-opacity;
+            font-size: 0.7rem;
+
+            &:after {
+                content: "";
+                background-color: $home-nav-color;
+                position: relative;
+                padding: 1px;
+                border-radius: 2rem;
+                cursor: pointer;
+            }
+        }
     }
 
-    li a {
-        opacity: 0.8;
-        color: $home-nav-color;
-        padding: 10px;
-        font-size: 0.8rem;
-        font-weight: 400;
-        cursor: default;
-    }
-
-    li a:hover {
-        color: $white-font-color;
-        font-weight: bold;
-    }
-
-    li a::after {
-        content: "";
-        height: 3rem;
-        background-color: $home-nav-color;
-        position: relative;
-        padding: 2px;
-        margin-left: 0.5rem;
-        border-radius: 2rem;
-        cursor: pointer;
-    }
-
-    @media (max-width: 48rem) {
+    @include mq($tablet) {
         span {
-            display: none;
+            visibility: visible;
+        }
+
+        li {
+            padding: 0.5rem;
+
+            a {
+                color: $home-nav-color;
+                font-size: 0.9rem;
+                font-weight: 400;
+                cursor: default;
+
+                #{$link-hover-selector} {
+                    color: $white-font-color;
+                    font-weight: bold;
+                }
+
+                &:after {
+                    padding: 3px 2px;
+                    margin-left: 0.5rem;
+                }
+            }
         }
     }
 }

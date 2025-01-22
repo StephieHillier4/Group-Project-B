@@ -7,10 +7,10 @@ $why-logo-color: rgb(40, 48, 78);
 $border-bottom-color: rgb(68, 71, 85);
 $hamburger-hover-color: rgb(208, 218, 242);
 $about-bg-color: rgb(33, 80, 190);
-$about-e-symbol: rgb(131, 185, 238);
 $design-bg-color: rgb(20, 138, 145);
 $stay-bg-color: rgb(229, 236, 252);
 $stay-button-color: rgb(25, 86, 179);
+$design-logo-color: rgb(66, 97, 101);
 
 // Text Colors
 $home-font-color: rgb(28, 83, 189);
@@ -26,19 +26,22 @@ $link-font: "Roboto Mono", monospace;
 
 // Typography
 $line-height: 1.5;
+$line-height-header: 1.1;
+$low-opacity: 0.8;
+$light-font-weight: 300;
+$medium-font-weight: 400;
+$bold-font-weight: 500;
 
 // Article Layouts
-$article-width-mobile: 90%;
-// $article-width-desktop: 80%;
+// $article-width-mobile: 80%;
 $article-width-desktop: 38rem;
-$text-margin: 4rem;
+// $text-margin: 4rem;
 
 // Media Query Breakpoints
-$desktop: em(1151);
-$tabletLandscape: em(1024);
-$tabletPortrait: em(850);
-$phoneLandscape: em(670);
-$phonePortrait: em(420);
+$mobileLarge: 30em;
+$tablet: 48em;
+$laptop: 64em;
+$laptopLarge: 120em;
 
 // Utility variables
-$link-hover-selector: "&:hover, &:focus, &:active";
+$link-hover-selector: "&:hover, &:active";

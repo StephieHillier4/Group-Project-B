@@ -16,38 +16,37 @@ body {
 
 main {
   margin-top: 0.5rem;
-  max-height: 99vh;
+  max-height: 98vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+}
+
+.section .text-content {
+  position: relative;
+  z-index: 20;
+}
+
+.section img {
+  position: absolute;
+  width: 90%;
+  z-index: 1;
+  right: -45%;
+  top: -9%;
+  transform: rotate(-10deg);
 }
 
 body,
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 2.3rem;
   font-weight: 400;
 }
-
-p {
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-a {
-  font-family: "Roboto Mono", monospace;
-  text-decoration: none;
-}
-
-a:hover,
-button:hover {
-  cursor: pointer;
-}
-
 @media (min-width: 48em) {
   h2 {
     font-size: 3rem;
@@ -59,23 +58,27 @@ button:hover {
     font-size: 3.8rem;
     margin: 0;
   }
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (min-width: 64em) {
   p {
     font-size: 1.2rem;
   }
 }
-.section .text-content {
-  position: relative;
-  z-index: 2;
-  width: 90%;
+
+a {
+  font-family: "Roboto Mono", monospace;
+  text-decoration: none;
 }
 
-.section img {
-  position: absolute;
-  width: 90%;
-  z-index: 1;
-  right: -10rem;
-  top: -4rem;
-  transform: rotate(-10deg);
+a:hover, a:active,
+button:hover,
+button:active {
+  cursor: pointer;
 }
 
 .site-nav {
@@ -83,34 +86,43 @@ button:hover {
   z-index: 10;
   display: flex;
   flex-direction: row-reverse;
-  left: 1.2rem;
-  top: 1.3rem;
+  align-items: center;
+  left: 0.6rem;
+  top: 0.6rem;
   transition: left 0.5s ease;
 }
-
-.site-nav:hover {
+.site-nav:hover, .site-nav:active {
   opacity: 0.8;
 }
-
-.site-nav img {
-  height: 3.2rem;
-  padding: 1rem;
+@media (min-width: 48em) {
+  .site-nav {
+    left: 2.4rem;
+    top: 1rem;
+  }
 }
-
 .site-nav a img {
-  padding-left: 0;
+  height: 3.1rem;
+  padding: 1rem 1rem 1rem 0;
+  margin: 0;
 }
 
 .nav-btn {
   border: none;
   background-color: transparent;
+  margin: 1rem 0.8rem 1rem;
+  padding: 0.4rem 0.5rem;
 }
-
-.nav-btn:hover {
+.nav-btn img {
+  height: 1rem;
+}
+.nav-btn:hover, .nav-btn:active {
   background-color: rgb(208, 218, 242);
   border-radius: 50%;
-  padding: 0;
-  margin: 0 0.5rem;
+}
+@media (min-width: 48em) {
+  .nav-btn {
+    display: none;
+  }
 }
 
 .site-nav-list {
@@ -118,12 +130,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 0.5rem;
   width: 18.3rem;
   height: 98.5vh;
-  margin: 0 0.5rem;
   left: -100%;
   background-color: rgb(21, 25, 43);
-  z-index: 50;
+  z-index: 20;
   border-radius: 1.5rem;
   transition: left 0.5s ease;
 }
@@ -141,11 +153,22 @@ button:hover {
   list-style-type: none;
   padding: 1.1rem;
 }
-.site-nav-list li:hover {
+.site-nav-list li:hover, .site-nav-list li:active {
   opacity: 0.8;
 }
 .site-nav-list li:last-of-type {
   border-bottom: none;
+}
+@media (min-width: 48em) {
+  .site-nav-list {
+    background-color: transparent;
+    transition: none;
+    left: 7.8rem;
+    top: 0.3rem;
+  }
+  .site-nav-list a {
+    color: rgb(26, 73, 181);
+  }
 }
 
 .site-nav.toggled {
@@ -160,6 +183,17 @@ button:hover {
   border-bottom: rgb(68, 71, 85) solid 1px;
   padding-left: 0;
   margin-right: 0.5rem;
+  font-weight: 350;
+}
+@media (min-width: 48em) {
+  .site-nav-top {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .site-nav-top li {
+    border: none;
+  }
 }
 
 .site-nav-bottom a,
@@ -173,34 +207,8 @@ button:hover {
 }
 
 @media (min-width: 48em) {
-  .nav-btn {
-    display: none;
-  }
-  .site-nav {
-    left: 3rem;
-    top: 1.3rem;
-  }
-  .site-nav-list {
-    background-color: transparent;
-    transition: none;
-    left: 10rem;
-    top: 0.5rem;
-  }
-  .site-nav-list a {
-    color: rgb(26, 73, 181);
-  }
-  .site-nav-top {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
   .site-nav-list img,
-  .site-nav-bottom {
-    display: none;
-  }
-  .site-nav-top li {
-    border: none;
-  }
+  .site-nav-bottom,
   .menu-jobs {
     display: none;
   }
@@ -208,41 +216,51 @@ button:hover {
 .side-nav {
   position: fixed;
   z-index: 10;
-  right: 1.5rem;
-  text-align: end;
   display: flex;
-  height: 100%;
   align-items: center;
+  right: 1.8rem;
+  text-align: end;
+  height: 100%;
+}
+.side-nav span {
+  visibility: hidden;
 }
 .side-nav li {
   list-style: none;
-  padding: 8px;
+  padding: 0.2rem;
 }
 .side-nav li a {
   opacity: 0.8;
-  color: rgb(26, 73, 181);
-  padding: 10px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  cursor: default;
+  font-size: 0.7rem;
 }
-.side-nav li a:hover {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-.side-nav li a::after {
+.side-nav li a:after {
   content: "";
-  height: 3rem;
   background-color: rgb(26, 73, 181);
   position: relative;
-  padding: 2px;
-  margin-left: 0.5rem;
+  padding: 1px;
   border-radius: 2rem;
   cursor: pointer;
 }
-@media (max-width: 48rem) {
+@media (min-width: 48em) {
   .side-nav span {
-    display: none;
+    visibility: visible;
+  }
+  .side-nav li {
+    padding: 0.5rem;
+  }
+  .side-nav li a {
+    color: rgb(26, 73, 181);
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: default;
+  }
+  .side-nav li a:hover, .side-nav li a:active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .side-nav li a:after {
+    padding: 3px 2px;
+    margin-left: 0.5rem;
   }
 }
 
@@ -250,13 +268,14 @@ button:hover {
   position: fixed;
   width: 100%;
   bottom: 1.5rem;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   justify-content: center;
   transition: left 5s ease;
 }
 .site-footer li {
   list-style: none;
+  font-weight: 350;
 }
 .site-footer a:hover {
   opacity: 0.8;
@@ -269,32 +288,33 @@ button:hover {
   align-items: center;
   gap: 1.5rem;
   margin: 0;
+  padding: 0;
 }
 .site-footer .footer-desktop {
   display: none;
 }
-
 @media (min-width: 48em) {
+  .site-footer {
+    justify-content: space-between;
+    width: 95%;
+  }
   .site-footer .footer-desktop {
     display: block;
   }
-  .site-footer {
-    justify-content: space-between;
-    width: 96%;
-  }
-  .footer-desktop ul {
+  .site-footer .footer-desktop ul {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.5rem;
     margin: 0;
   }
-  .footer-desktop a,
-  .footer-desktop p {
+  .site-footer .footer-desktop a,
+  .site-footer .footer-desktop p {
     color: rgb(26, 73, 181);
     font-family: "Roboto Mono", monospace;
     font-size: 0.8rem;
   }
 }
+
 .site-footer.pushed {
   left: 19.5rem;
 }
@@ -307,16 +327,15 @@ button:hover {
   position: relative;
   overflow: hidden;
   margin: 1rem 0.5rem;
-  padding: 5rem 0;
+  padding: 0 2rem 0 1.5rem;
   scroll-snap-align: start;
   border-radius: 1.5rem;
 }
 @media (min-width: 30em) {
   .section img {
     width: 80%;
-    z-index: 1;
-    right: -17rem;
-    top: -5rem;
+    right: -25%;
+    top: -13%;
     transform: rotate(-5deg);
   }
 }
@@ -327,10 +346,8 @@ button:hover {
   .section img {
     width: 50%;
   }
-}
-@media (min-width: 64rem) {
-  .section p {
-    margin-right: 4rem;
+  .section h2 {
+    margin: 1.5rem 0;
   }
 }
 
@@ -342,18 +359,18 @@ button:hover {
   background-color: rgb(225, 234, 249);
   color: rgb(28, 83, 189);
 }
-.home h2 {
+.home h1 {
   font-size: 60px;
   font-style: bold;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .home h2 {
+  .home h1 {
     font-style: bold;
   }
 }
 @media (min-width: 1024px) and (max-width: 1920px) {
-  .home h2 {
+  .home h1 {
     font-size: 96px;
     font-style: bold;
   }
@@ -390,12 +407,17 @@ button:hover {
   background-color: rgb(33, 80, 190);
   color: rgb(255, 255, 255);
 }
+.about p {
+  font-weight: 300;
+}
 
 .more-docs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 2em;
   gap: 1em;
+  width: 57%;
 }
 
 .more-docs button {
@@ -412,13 +434,23 @@ button:hover {
   font-size: 1.2em;
 }
 
-.learn-more a {
+button.learn-more a {
   color: rgb(33, 80, 190);
   font-weight: bold;
+  display: block;
 }
 
-.learn-more {
+button.learn-more {
   border: none;
+  width: 12em;
+  height: 3.8em;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.learn-more:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .read-docs {
@@ -436,6 +468,7 @@ button:hover {
 }
 .why p {
   opacity: 0.8;
+  font-weight: 300;
 }
 
 .design {
@@ -444,18 +477,36 @@ button:hover {
   background-color: rgb(20, 138, 145);
   color: rgb(255, 255, 255);
 }
+.design h2 {
+  color: rgb(19, 25, 44);
+  font-weight: 500;
+}
+.design p {
+  color: rgb(35, 44, 71);
+}
+.design img {
+  opacity: 0.45;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(45%) saturate(350%) hue-rotate(150deg) brightness(82%) contrast(90%);
+}
 
 .more-details {
   margin-top: 1em;
   border: none;
 }
 
-.more-details button {
+button.more-details {
   border-radius: 2rem;
   z-index: 99;
-  width: 12em;
+  width: 13.5em;
   height: 3.8em;
   background-color: rgb(19, 25, 44);
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.more-details:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .more-details a {
@@ -481,6 +532,13 @@ button:hover {
   height: 3.8em;
   background-color: rgb(25, 86, 179);
   border: 0rem;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+button.get-updates:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 .get-updates a {

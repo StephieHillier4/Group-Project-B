@@ -1,13 +1,5 @@
 @use "variables" as *;
 
-// Mixin for toggle menu
-@mixin toggle-transition {
-    transition: left 5s ease;
-}
-
-@mixin pushed-right {
-    left: 20rem;
-}
 
 // Mixin for main sections
 @mixin section-layout {
@@ -18,22 +10,29 @@
     position: relative;
     overflow: hidden;
     margin: 1rem 0.5rem;
-    padding: 5rem 0;
+    padding: 0 2rem 0 1.5rem;
     scroll-snap-align: start;
     border-radius: 1.5rem;
 }
 
 %article-layout {
     position: relative;
-    z-index: 2;
-    width: $article-width-mobile;
+    z-index: 20;
+    // width: $article-width-mobile;
 }
 
 %bg-symbol-mobile {
     position: absolute;
     width: 90%;
     z-index: 1;
-    right: -10rem;
-    top: -4rem;
+    right: -45%;
+    top: -9%;
     transform: rotate(-10deg);
+}
+
+// Mixin for Media Query
+@mixin mq($w) {
+    @media (min-width: $w) {
+        @content;
+    }
 }
