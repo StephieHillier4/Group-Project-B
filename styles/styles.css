@@ -16,54 +16,12 @@ body {
 
 main {
   margin-top: 0.5rem;
-  max-height: 99vh;
+  max-height: 98vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
-body,
-h1,
-h2 {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: 2.3rem;
-  font-weight: 400;
-}
-
-p {
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-a {
-  font-family: "Roboto Mono", monospace;
-  text-decoration: none;
-}
-
-a:hover,
-button:hover {
-  cursor: pointer;
-}
-
-@media (min-width: 48em) {
-  h2 {
-    font-size: 3rem;
-    font-weight: 500;
-  }
-}
-@media (min-width: 64em) {
-  h2 {
-    font-size: 3.8rem;
-    margin: 0;
-  }
-  p {
-    font-size: 1.2rem;
-  }
-}
 .section .text-content {
   position: relative;
   z-index: 2;
@@ -78,6 +36,51 @@ button:hover {
   transform: rotate(-10deg);
 }
 
+body,
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+@media (min-width: 48em) {
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 3.8rem;
+    margin: 0;
+  }
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (min-width: 64em) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  font-family: "Roboto Mono", monospace;
+  text-decoration: none;
+}
+
+a:hover, a:active,
+button:hover,
+button:active {
+  cursor: pointer;
+}
+
 .site-nav {
   position: fixed;
   z-index: 10;
@@ -88,19 +91,19 @@ button:hover {
   top: 0.6rem;
   transition: left 0.5s ease;
 }
-
-.site-nav:hover {
+.site-nav:hover, .site-nav:active {
   opacity: 0.8;
 }
-
+@media (min-width: 48em) {
+  .site-nav {
+    left: 2.4rem;
+    top: 1rem;
+  }
+}
 .site-nav a img {
   height: 3.1rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
   margin: 0;
-}
-
-.site-nav a img {
-  padding-left: 0;
 }
 
 .nav-btn {
@@ -109,14 +112,17 @@ button:hover {
   margin: 1rem 0.8rem 1rem;
   padding: 0.4rem 0.5rem;
 }
-
 .nav-btn img {
   height: 1rem;
 }
-
-.nav-btn:hover {
+.nav-btn:hover, .nav-btn:active {
   background-color: rgb(208, 218, 242);
   border-radius: 50%;
+}
+@media (min-width: 48em) {
+  .nav-btn {
+    display: none;
+  }
 }
 
 .site-nav-list {
@@ -124,9 +130,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 0.5rem;
   width: 18.3rem;
   height: 98.5vh;
-  margin: 0 0.5rem;
   left: -100%;
   background-color: rgb(21, 25, 43);
   z-index: 50;
@@ -147,11 +153,22 @@ button:hover {
   list-style-type: none;
   padding: 1.1rem;
 }
-.site-nav-list li:hover {
+.site-nav-list li:hover, .site-nav-list li:active {
   opacity: 0.8;
 }
 .site-nav-list li:last-of-type {
   border-bottom: none;
+}
+@media (min-width: 48em) {
+  .site-nav-list {
+    background-color: transparent;
+    transition: none;
+    left: 7.8rem;
+    top: 0.3rem;
+  }
+  .site-nav-list a {
+    color: rgb(26, 73, 181);
+  }
 }
 
 .site-nav.toggled {
@@ -168,6 +185,16 @@ button:hover {
   margin-right: 0.5rem;
   font-weight: 350;
 }
+@media (min-width: 48em) {
+  .site-nav-top {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .site-nav-top li {
+    border: none;
+  }
+}
 
 .site-nav-bottom a,
 .site-nav-bottom p {
@@ -180,34 +207,8 @@ button:hover {
 }
 
 @media (min-width: 48em) {
-  .nav-btn {
-    display: none;
-  }
-  .site-nav {
-    left: 2.4rem;
-    top: 1rem;
-  }
-  .site-nav-list {
-    background-color: transparent;
-    transition: none;
-    left: 7.8rem;
-    top: 0.3rem;
-  }
-  .site-nav-list a {
-    color: rgb(26, 73, 181);
-  }
-  .site-nav-top {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
   .site-nav-list img,
-  .site-nav-bottom {
-    display: none;
-  }
-  .site-nav-top li {
-    border: none;
-  }
+  .site-nav-bottom,
   .menu-jobs {
     display: none;
   }
@@ -215,11 +216,11 @@ button:hover {
 .side-nav {
   position: fixed;
   z-index: 10;
+  display: flex;
+  align-items: center;
   right: 1.8rem;
   text-align: end;
-  display: flex;
   height: 100%;
-  align-items: center;
 }
 .side-nav span {
   visibility: hidden;
@@ -232,7 +233,7 @@ button:hover {
   opacity: 0.8;
   font-size: 0.7rem;
 }
-.side-nav li a::after {
+.side-nav li a:after {
   content: "";
   background-color: rgb(26, 73, 181);
   position: relative;
@@ -240,7 +241,7 @@ button:hover {
   border-radius: 2rem;
   cursor: pointer;
 }
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
   .side-nav span {
     visibility: visible;
   }
@@ -253,11 +254,11 @@ button:hover {
     font-weight: 400;
     cursor: default;
   }
-  .side-nav li a:hover {
+  .side-nav li a:hover, .side-nav li a:active {
     color: rgb(255, 255, 255);
     font-weight: bold;
   }
-  .side-nav li a::after {
+  .side-nav li a:after {
     padding: 3px 2px;
     margin-left: 0.5rem;
   }
@@ -292,28 +293,28 @@ button:hover {
 .site-footer .footer-desktop {
   display: none;
 }
-
 @media (min-width: 48em) {
-  .site-footer .footer-desktop {
-    display: block;
-  }
   .site-footer {
     justify-content: space-between;
     width: 95%;
   }
-  .footer-desktop ul {
+  .site-footer .footer-desktop {
+    display: block;
+  }
+  .site-footer .footer-desktop ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin: 0;
   }
-  .footer-desktop a,
-  .footer-desktop p {
+  .site-footer .footer-desktop a,
+  .site-footer .footer-desktop p {
     color: rgb(26, 73, 181);
     font-family: "Roboto Mono", monospace;
     font-size: 0.8rem;
   }
 }
+
 .site-footer.pushed {
   left: 19.5rem;
 }

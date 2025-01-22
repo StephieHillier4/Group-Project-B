@@ -2,7 +2,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    // height: 100vh;
 }
 
 *,
@@ -18,7 +17,7 @@ body {
 
 main {
     margin-top: 0.5rem;
-    max-height: 99vh;
+    max-height: 98vh;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
