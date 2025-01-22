@@ -24,7 +24,7 @@ main {
 
 .section .text-content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 .section img {
@@ -135,7 +135,7 @@ button:active {
   height: 98.5vh;
   left: -100%;
   background-color: rgb(21, 25, 43);
-  z-index: 50;
+  z-index: 20;
   border-radius: 1.5rem;
   transition: left 0.5s ease;
 }
@@ -268,7 +268,7 @@ button:active {
   position: fixed;
   width: 100%;
   bottom: 1.5rem;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   justify-content: center;
   transition: left 5s ease;

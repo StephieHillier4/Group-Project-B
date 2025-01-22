@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+
 // Mixin for main sections
 @mixin section-layout {
     display: flex;
@@ -16,7 +17,7 @@
 
 %article-layout {
     position: relative;
-    z-index: 2;
+    z-index: 20;
     // width: $article-width-mobile;
 }
 
