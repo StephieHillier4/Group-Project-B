@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+// Global Section Styling
 .section {
     @include section-layout;
 
@@ -12,18 +13,16 @@
         @extend %article-layout;
     }
 
-    @media (min-width: 30em) {
+    @include mq($mobileLarge) {
         img {
             width: 80%;
-            // right: -17rem;
-            // top: -5rem;
             right: -25%;
             top: -13%;
             transform: rotate(-5deg);
         }
     }
 
-    @media (min-width: 48em) {
+    @include mq($tablet) {
         .text-content {
             width: $article-width-desktop;
         }
@@ -36,39 +35,29 @@
             margin: 1.5rem 0;
         }
     }
-
-    // @media (min-width: 64rem) {
-    //     p {
-    //         margin-right: $text-margin;
-    //     }
-    // }
 }
 
 .section.pushed {
     left: 19rem;
 }
 
-// ----------- Please add your sections below
+// Button Hover Effect
+
+button.learn-more,
+button.more-details,
+button.get-updates {
+    #{$link-hover-selector} {
+        transform: translateY(-2px);
+        opacity: $low-opacity;
+    }
+}
+
+// Individual Sections
 
 // Home
 .home {
     background-color: $home-bg-color;
     color: $home-font-color;
-
-    h1 {
-        font-size: 60px;
-        font-style: bold;
-        margin-bottom: 0.5rem;
-
-        @media (min-width: 768px) {
-            font-style: bold;
-        }
-
-        @media (min-width: 1024px) and (max-width: 1920px) {
-            font-size: 96px;
-            font-style: bold;
-        }
-    }
 
     .arrow-icon-container {
         display: inline-block;
@@ -76,39 +65,37 @@
     }
 
     .go-down-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $home-font-color;
         border: none;
         border-radius: 50%;
         width: 54px;
         height: 54px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
-    }
 
-    .arrow-icon-container:hover .go-down-btn {
-        background-color: $home-go-down-button-hover;
-        transform: scale(1.1);
-    }
+        img {
+            position: relative;
+            top: 5%;
+            left: 2%;
+        }
 
-    .go-down-btn img {
-        position: relative;
-        top: 5%;
-        left: 2%;
+        #{$link-hover-selector} {
+            background-color: $home-go-down-button-hover;
+            transform: scale(1.1);
+        }
     }
 }
 
 // About
 .about {
-    display: flex;
-    flex-direction: column;
     background-color: $about-bg-color;
     color: $white-font-color;
 
     p {
-        font-weight: 300;
+        font-weight: $light-font-weight;
     }
 }
 
@@ -116,30 +103,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 2em;
-    gap: 1em;
+    margin-top: 2rem;
+    gap: 1rem;
     width: 57%;
-}
 
-.more-docs button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2rem;
-    z-index: 99;
-    width: 12em;
-    height: 3.8em;
-    
-}
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        height: 3.8em;
+        border-radius: 2rem;
+        z-index: 99;
+    }
 
-.more-docs a {
-    font-size: 1.2em;
-}
-
-button.learn-more a {
-    color: $about-bg-color;
-    font-weight: bold;
-    display: block;
+    a {
+        font-size: 1.2em;
+    }
 }
 
 button.learn-more {
@@ -147,22 +127,21 @@ button.learn-more {
     width: 12em;
     height: 3.8em;
     transition: transform 0.3s ease;
-    opacity: 1; 
+
+    a {
+        display: block;
+        color: $about-bg-color;
+        font-weight: bold;
+    }
 }
 
-button.learn-more:hover {
-    transform: translateY(-2px);
-    opacity: 0.8;
-}
-
-
-.read-docs {
+button.read-docs {
     background-color: $about-bg-color;
     border: 1px solid $white-font-color;
-}
 
-.read-docs a {
-    color: $white-font-color;
+    a {
+        color: $white-font-color;
+    }
 }
 
 // Why
@@ -170,96 +149,69 @@ button.learn-more:hover {
     background-color: $why-bg-color;
     color: $white-font-color;
 
-    h2 {
-    }
     p {
-        opacity: 0.8;
-        font-weight: 300;
+        opacity: $low-opacity;
+        font-weight: $light-font-weight;
     }
 }
 
 // Design
-
 .design {
-    display: flex;
-    flex-direction: column;
     background-color: $design-bg-color;
-    color: $white-font-color;
+    color: $design-font-color;
 
     h2 {
-        color: rgb(19, 25, 44);
-        font-weight: 500;
-    }
-
-    p {
-        color: rgb(35, 44, 71);
+        color: $design-header-color;
+        font-weight: $bold-font-weight;
     }
 
     img {
         opacity: 0.48;
-        
-        filter: brightness(0) saturate(100%) invert(40%) sepia(45%) saturate(350%) hue-rotate(150deg) brightness(82%) contrast(90%);
+        filter: $design-logo-color;
     }
 }
 
-.more-details {
-    margin-top: 1em;
-    border: none;
-}
-
 button.more-details {
-    border-radius: 2rem;
-    z-index: 99;
     width: 13.5em;
     height: 3.8em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 2rem;
     background-color: $design-font-color;
+    z-index: 99;
     transition: transform 0.3s ease;
-    opacity: 1; 
-}
 
-button.more-details:hover {
-    transform: translateY(-2px);
-    opacity: 0.8;
-}
-
-.more-details a {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: $white-font-color;
+    a {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $white-font-color;
+    }
 }
 
 // Stay Updated
-
 .stay-updated {
-    display: flex;
-    flex-direction: column;
     background-color: $stay-bg-color;
     color: $stay-font-color;
 }
 
-.get-updates button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2rem;
-    z-index: 99;
-    width: 12em;
-    height: 3.8em;
-    background-color: $stay-button-color;
-    border: 0rem;
-    transition: transform 0.3s ease;
-    opacity: 1; 
-}
+.get-updates {
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        height: 3.8em;
+        border: none;
+        border-radius: 2rem;
+        z-index: 99;
+        background-color: $stay-button-color;
+        transition: transform 0.3s ease;
+    }
 
-button.get-updates:hover {
-    transform: translateY(-2px);
-    opacity: 0.8;
+    a {
+        color: $html-bg-color;
+        font-size: 1rem;
+        line-height: $line-height;
+        font-weight: bold;
+    }
 }
-
-.get-updates a {
-    color: $html-bg-color;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: bold;
-}
-
