@@ -3,11 +3,11 @@
 
 .site-footer {
     position: fixed;
+    display: flex;
+    justify-content: center;
     width: 100%;
     bottom: 1.5rem;
     z-index: 20;
-    display: flex;
-    justify-content: center;
     transition: left 5s ease;
 
     li {
@@ -15,8 +15,10 @@
         font-weight: 350;
     }
 
-    a:hover {
-        opacity: $low-opacity;
+    a {
+        #{$link-hover-selector} {
+            opacity: $low-opacity;
+        }
     }
 
     img {

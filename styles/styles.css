@@ -43,6 +43,17 @@ h2 {
   line-height: 1.1;
 }
 
+h1 {
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
 h2 {
   font-size: 2.3rem;
   font-weight: 400;
@@ -83,12 +94,12 @@ button:active {
 
 .site-nav {
   position: fixed;
-  z-index: 10;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   left: 0.6rem;
   top: 0.6rem;
+  z-index: 10;
   transition: left 0.5s ease;
 }
 .site-nav:hover, .site-nav:active {
@@ -135,8 +146,8 @@ button:active {
   height: 98.5vh;
   left: -100%;
   background-color: rgb(21, 25, 43);
-  z-index: 20;
   border-radius: 1.5rem;
+  z-index: 20;
   transition: left 0.5s ease;
 }
 .site-nav-list img {
@@ -145,10 +156,6 @@ button:active {
   vertical-align: top;
   margin-right: 0.5rem;
 }
-.site-nav-list a {
-  color: rgb(255, 255, 255);
-  font-size: 0.9rem;
-}
 .site-nav-list li {
   list-style-type: none;
   padding: 1.1rem;
@@ -156,8 +163,9 @@ button:active {
 .site-nav-list li:hover, .site-nav-list li:active {
   opacity: 0.8;
 }
-.site-nav-list li:last-of-type {
-  border-bottom: none;
+.site-nav-list a {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
 }
 @media (min-width: 48em) {
   .site-nav-list {
@@ -184,6 +192,9 @@ button:active {
   padding-left: 0;
   margin-right: 0.5rem;
   font-weight: 350;
+}
+.site-nav-top li:last-of-type {
+  border-bottom: none;
 }
 @media (min-width: 48em) {
   .site-nav-top {
@@ -215,12 +226,12 @@ button:active {
 }
 .side-nav {
   position: fixed;
-  z-index: 10;
   display: flex;
   align-items: center;
+  height: 100%;
   right: 1.8rem;
   text-align: end;
-  height: 100%;
+  z-index: 10;
 }
 .side-nav span {
   visibility: hidden;
@@ -266,18 +277,18 @@ button:active {
 
 .site-footer {
   position: fixed;
+  display: flex;
+  justify-content: center;
   width: 100%;
   bottom: 1.5rem;
   z-index: 20;
-  display: flex;
-  justify-content: center;
   transition: left 5s ease;
 }
 .site-footer li {
   list-style: none;
   font-weight: 350;
 }
-.site-footer a:hover {
+.site-footer a:hover, .site-footer a:active {
   opacity: 0.8;
 }
 .site-footer img {
@@ -320,16 +331,16 @@ button:active {
 }
 
 .section {
+  position: relative;
   display: flex;
   height: 98.5vh;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
   margin: 1rem 0.5rem;
   padding: 0 2rem 0 1.5rem;
-  scroll-snap-align: start;
   border-radius: 1.5rem;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
 @media (min-width: 30em) {
   .section img {
@@ -355,55 +366,46 @@ button:active {
   left: 19rem;
 }
 
+button.learn-more:hover, button.learn-more:active,
+button.more-details:hover,
+button.more-details:active,
+button.get-updates:hover,
+button.get-updates:active {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
 .home {
   background-color: rgb(225, 234, 249);
   color: rgb(28, 83, 189);
-}
-.home h1 {
-  font-size: 60px;
-  font-style: bold;
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 768px) {
-  .home h1 {
-    font-style: bold;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1920px) {
-  .home h1 {
-    font-size: 96px;
-    font-style: bold;
-  }
 }
 .home .arrow-icon-container {
   display: inline-block;
   margin-top: 2rem;
 }
 .home .go-down-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(28, 83, 189);
   border: none;
   border-radius: 50%;
   width: 54px;
   height: 54px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.home .arrow-icon-container:hover .go-down-btn {
-  background-color: rgb(87, 128, 207);
-  transform: scale(1.1);
 }
 .home .go-down-btn img {
   position: relative;
   top: 5%;
   left: 2%;
 }
+.home .go-down-btn:hover, .home .go-down-btn:active {
+  background-color: rgb(87, 128, 207);
+  transform: scale(1.1);
+}
 
 .about {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(33, 80, 190);
   color: rgb(255, 255, 255);
 }
@@ -415,29 +417,21 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 2em;
-  gap: 1em;
+  margin-top: 2rem;
+  gap: 1rem;
   width: 57%;
 }
-
 .more-docs button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2rem;
-  z-index: 99;
   width: 12em;
   height: 3.8em;
+  border-radius: 2rem;
+  z-index: 99;
 }
-
 .more-docs a {
   font-size: 1.2em;
-}
-
-button.learn-more a {
-  color: rgb(33, 80, 190);
-  font-weight: bold;
-  display: block;
 }
 
 button.learn-more {
@@ -445,20 +439,18 @@ button.learn-more {
   width: 12em;
   height: 3.8em;
   transition: transform 0.3s ease;
-  opacity: 1;
+}
+button.learn-more a {
+  display: block;
+  color: rgb(33, 80, 190);
+  font-weight: bold;
 }
 
-button.learn-more:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
-.read-docs {
+button.read-docs {
   background-color: rgb(33, 80, 190);
   border: 1px solid rgb(255, 255, 255);
 }
-
-.read-docs a {
+button.read-docs a {
   color: rgb(255, 255, 255);
 }
 
@@ -472,52 +464,35 @@ button.learn-more:hover {
 }
 
 .design {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(20, 138, 145);
-  color: rgb(255, 255, 255);
+  color: rgb(35, 44, 71);
 }
 .design h2 {
   color: rgb(19, 25, 44);
   font-weight: 500;
 }
-.design p {
-  color: rgb(35, 44, 71);
-}
 .design img {
-  opacity: 0.45;
+  opacity: 0.48;
   filter: brightness(0) saturate(100%) invert(40%) sepia(45%) saturate(350%) hue-rotate(150deg) brightness(82%) contrast(90%);
 }
 
-.more-details {
-  margin-top: 1em;
-  border: none;
-}
-
 button.more-details {
-  border-radius: 2rem;
-  z-index: 99;
   width: 13.5em;
   height: 3.8em;
-  background-color: rgb(19, 25, 44);
+  margin-top: 1em;
+  border: none;
+  border-radius: 2rem;
+  background-color: rgb(35, 44, 71);
+  z-index: 99;
   transition: transform 0.3s ease;
-  opacity: 1;
 }
-
-button.more-details:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
-.more-details a {
+button.more-details a {
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
 
 .stay-updated {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(229, 236, 252);
   color: rgb(42, 94, 204);
 }
@@ -526,25 +501,18 @@ button.more-details:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2rem;
-  z-index: 99;
   width: 12em;
   height: 3.8em;
+  border: none;
+  border-radius: 2rem;
+  z-index: 99;
   background-color: rgb(25, 86, 179);
-  border: 0rem;
   transition: transform 0.3s ease;
-  opacity: 1;
 }
-
-button.get-updates:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
-
 .get-updates a {
   color: rgb(255, 255, 255);
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   font-weight: bold;
 }
 
