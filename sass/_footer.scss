@@ -1,0 +1,66 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 1.5rem;
+    z-index: 20;
+    transition: left 5s ease;
+
+    li {
+        list-style: none;
+        font-weight: 350;
+    }
+
+    a {
+        #{$link-hover-selector} {
+            opacity: $low-opacity;
+        }
+    }
+
+    img {
+        width: 1.1rem;
+    }
+
+    ul.social-media {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-desktop {
+        display: none;
+    }
+
+    @include mq($tablet) {
+        justify-content: space-between;
+        width: 95%;
+
+        .footer-desktop {
+            display: block;
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 0;
+            }
+
+            a,
+            p {
+                color: $home-nav-color;
+                font-family: $link-font;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.site-footer.pushed {
+    left: 19.5rem;
+}

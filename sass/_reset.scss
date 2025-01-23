@@ -1,0 +1,24 @@
+// Box Sizing Reset
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+main {
+    margin-top: 0.5rem;
+    max-height: 98vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}

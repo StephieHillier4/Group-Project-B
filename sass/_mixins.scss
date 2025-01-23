@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+// Mixin for main sections
+@mixin section-layout {
+    position: relative;
+    display: flex;
+    height: 98.5vh;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0.5rem;
+    padding: 0 2rem 0 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+%article-layout {
+    position: relative;
+    z-index: 20;
+}
+
+%bg-symbol-mobile {
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+    right: -45%;
+    top: -9%;
+    transform: rotate(-10deg);
+}
+
+// Mixin for Media Query
+@mixin mq($w) {
+    @media (min-width: $w) {
+        @content;
+    }
+}

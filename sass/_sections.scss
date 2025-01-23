@@ -1,0 +1,217 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Global Section Styling
+.section {
+    @include section-layout;
+
+    img {
+        @extend %bg-symbol-mobile;
+    }
+
+    .text-content {
+        @extend %article-layout;
+    }
+
+    @include mq($mobileLarge) {
+        img {
+            width: 80%;
+            right: -25%;
+            top: -13%;
+            transform: rotate(-5deg);
+        }
+    }
+
+    @include mq($tablet) {
+        .text-content {
+            width: $article-width-desktop;
+        }
+
+        img {
+            width: 50%;
+        }
+
+        h2 {
+            margin: 1.5rem 0;
+        }
+    }
+}
+
+.section.pushed {
+    left: 19rem;
+}
+
+// Button Hover Effect
+
+button.learn-more,
+button.more-details,
+button.get-updates {
+    #{$link-hover-selector} {
+        transform: translateY(-2px);
+        opacity: $low-opacity;
+    }
+}
+
+// Individual Sections
+
+// Home
+.home {
+    background-color: $home-bg-color;
+    color: $home-font-color;
+
+    .arrow-icon-container {
+        display: inline-block;
+        margin-top: 2rem;
+    }
+
+    .go-down-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $home-font-color;
+        border: none;
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        img {
+            position: relative;
+            top: 5%;
+            left: 2%;
+        }
+
+        #{$link-hover-selector} {
+            background-color: $home-go-down-button-hover;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// About
+.about {
+    background-color: $about-bg-color;
+    color: $white-font-color;
+
+    p {
+        font-weight: $light-font-weight;
+    }
+}
+
+.more-docs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    gap: 1rem;
+    width: 57%;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        height: 3.8em;
+        border-radius: 2rem;
+        z-index: 99;
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+}
+
+button.learn-more {
+    border: none;
+    width: 12em;
+    height: 3.8em;
+    transition: transform 0.3s ease;
+
+    a {
+        display: block;
+        color: $about-bg-color;
+        font-weight: bold;
+    }
+}
+
+button.read-docs {
+    background-color: $about-bg-color;
+    border: 1px solid $white-font-color;
+
+    a {
+        color: $white-font-color;
+    }
+}
+
+// Why
+.why {
+    background-color: $why-bg-color;
+    color: $white-font-color;
+
+    p {
+        opacity: $low-opacity;
+        font-weight: $light-font-weight;
+    }
+}
+
+// Design
+.design {
+    background-color: $design-bg-color;
+    color: $design-font-color;
+
+    h2 {
+        color: $design-header-color;
+        font-weight: $bold-font-weight;
+    }
+
+    img {
+        opacity: 0.48;
+        filter: $design-logo-color;
+    }
+}
+
+button.more-details {
+    width: 13.5em;
+    height: 3.8em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 2rem;
+    background-color: $design-font-color;
+    z-index: 99;
+    transition: transform 0.3s ease;
+
+    a {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $white-font-color;
+    }
+}
+
+// Stay Updated
+.stay-updated {
+    background-color: $stay-bg-color;
+    color: $stay-font-color;
+}
+
+.get-updates {
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        height: 3.8em;
+        border: none;
+        border-radius: 2rem;
+        z-index: 99;
+        background-color: $stay-button-color;
+        transition: transform 0.3s ease;
+    }
+
+    a {
+        color: $html-bg-color;
+        font-size: 1rem;
+        line-height: $line-height;
+        font-weight: bold;
+    }
+}

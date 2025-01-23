@@ -1,0 +1,55 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body,
+h1,
+h2 {
+    font-family: $main-font;
+    line-height: $line-height-header;
+}
+
+h1 {
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+    @include mq($laptop) {
+        font-size: 6rem;
+    }
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-weight: $medium-font-weight;
+
+    @include mq($tablet) {
+        font-size: 3rem;
+        font-weight: $bold-font-weight;
+    }
+
+    @include mq($laptop) {
+        font-size: 3.8rem;
+        margin: 0;
+    }
+}
+
+p {
+    font-weight: $medium-font-weight;
+    line-height: $line-height;
+
+    @include mq($laptop) {
+        font-size: 1.2rem;
+    }
+}
+
+a {
+    font-family: $link-font;
+    text-decoration: none;
+}
+
+a,
+button {
+    #{$link-hover-selector} {
+        cursor: pointer;
+    }
+}

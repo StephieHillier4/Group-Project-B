@@ -1,0 +1,45 @@
+// Colors
+$html-bg-color: rgb(255, 255, 255);
+$border-bottom-color: rgb(68, 71, 85);
+$hamburger-hover-color: rgb(208, 218, 242);
+$home-bg-color: rgb(225, 234, 249);
+$home-go-down-button-hover: rgb(87, 128, 207);
+$why-bg-color: rgb(21, 25, 43);
+$about-bg-color: rgb(33, 80, 190);
+$design-bg-color: rgb(20, 138, 145);
+$design-logo-color: brightness(0) saturate(100%) invert(40%) sepia(45%)
+    saturate(350%) hue-rotate(150deg) brightness(82%) contrast(90%);
+$stay-bg-color: rgb(229, 236, 252);
+$stay-button-color: rgb(25, 86, 179);
+
+// Text Colors
+$home-font-color: rgb(28, 83, 189);
+$home-nav-color: rgb(26, 73, 181);
+$design-header-color: rgb(19, 25, 44);
+$design-font-color: rgb(35, 44, 71);
+$white-font-color: rgb(255, 255, 255);
+$grey-font-color: rgb(138, 140, 149);
+$stay-font-color: rgb(42, 94, 204);
+
+// Fonts
+$main-font: "Roboto", sans-serif;
+$link-font: "Roboto Mono", monospace;
+
+// Typography
+$line-height: 1.5;
+$line-height-header: 1.1;
+$low-opacity: 0.8;
+$light-font-weight: 300;
+$medium-font-weight: 400;
+$bold-font-weight: 500;
+
+// Article Layouts
+$article-width-desktop: 38rem;
+
+// Media Query Breakpoints
+$mobileLarge: 30em;
+$tablet: 48em;
+$laptop: 64em;
+
+// Utility variables
+$link-hover-selector: "&:hover, &:active";
